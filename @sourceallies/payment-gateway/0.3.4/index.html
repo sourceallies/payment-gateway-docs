@@ -1,0 +1,653 @@
+<!DOCTYPE html><html class="default no-js"><head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>@sourceallies/payment-gateway - v0.3.4</title>
+	<meta name="description" content="Documentation for @sourceallies/payment-gateway - v0.3.4">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/main.css">
+<link rel="icon" href="favicon.png"></head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="assets/js/search.json" data-base=".">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text">
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="index.html" class="title">@sourceallies/payment-gateway - v0.3.4</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked="">
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-only-exported">
+							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="globals.html">Globals</a>
+				</li>
+			</ul>
+			<h1>@sourceallies/payment-gateway - v0.3.4</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<div class="tsd-panel tsd-typography">
+				<a href="#payment-gateway-javascript-client-library" id="payment-gateway-javascript-client-library" style="color: inherit; text-decoration: none;">
+					<h1>Payment Gateway JavaScript Client Library</h1>
+				</a>
+				<ul>
+					<li><a href="#payment-gateway-javascript-client-library">Payment Gateway JavaScript Client Library</a></li>
+					<li><a href="#introduction">Introduction</a></li>
+					<li><a href="#getting-started">Getting Started</a><ul>
+							<li><a href="#in-html-file">In HTML File</a></li>
+							<li><a href="#node-modules">Node Modules</a></li>
+						</ul>
+					</li>
+					<li><a href="#extended-usage">Extended Usage</a><ul>
+							<li><a href="#single-transaction">Single Transaction</a></li>
+							<li><a href="#recurring-transacion-subscription">Recurring Transacion (Subscription)</a></li>
+						</ul>
+					</li>
+				</ul>
+				<a href="#introduction" id="introduction" style="color: inherit; text-decoration: none;">
+					<h1>Introduction</h1>
+				</a>
+				<p><a href="https://badge.fury.io/js/%40sourceallies%2Fpayment-gateway"><img src="https://badge.fury.io/js/%40sourceallies%2Fpayment-gateway.svg" alt="npm version"></a></p>
+				<p>NPM package used to interface your website with <a href="https://www.sourceallies.com/payment-gateway">Source Allies Payment Gateway</a>. The developer documentation for this package <a href="https://sourceallies.github.io/payment-gateway-js/index.html">can be found here</a>. A tutorial of how to integrate Payment Gateway with your website <a href="https://www.sourceallies.com/payment-gateway/developer">can be found here</a>.</p>
+				<a href="#getting-started" id="getting-started" style="color: inherit; text-decoration: none;">
+					<h1>Getting Started</h1>
+				</a>
+				<a href="#in-html-file" id="in-html-file" style="color: inherit; text-decoration: none;">
+					<h2>In HTML File</h2>
+				</a>
+				<ol>
+					<li><p>Add a <code>&lt;script&gt;</code> tag in the head of your html file that references the published JavaScript bundle.</p>
+						<pre><code class="language-html"> <span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+     <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+         <span class="hljs-tag">&lt;<span class="hljs-name">script</span>
+             <span class="hljs-attr">src</span>=<span class="hljs-string">"https://unpkg.com/@sourceallies/payment-gateway@latest/dist/payment-gateway.umd.js"</span>
+         &gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+     <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span></code></pre>
+						<blockquote>
+							<p>You should replace <code>@latest</code> with the current version of the NPM package that can be found in the badge above that says <code>NPM Package</code> (e.g. the badge says 0.3.2, then replace <code>@latest</code> with <code>@0.3.2</code>). </p>
+						</blockquote>
+					</li>
+					<li><p>You can then start calling the functions in the form of <code>paymentGateway.FUNCTION_NAME()</code>. Here is an example of usage:</p>
+						<pre><code class="language-html"> <span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+     <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+         <span class="hljs-tag">&lt;<span class="hljs-name">script</span>
+             <span class="hljs-attr">src</span>=<span class="hljs-string">"https://unpkg.com/@sourceallies/payment-gateway@latest/dist/payment-gateway.umd.js"</span>
+         &gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+         <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+             <span class="hljs-keyword">const</span> encryptedPaymentData = paymentGateway.encryptPaymentData(
+                 response,
+                 authorizeNetApiKey,
+                 paymentData
+             );
+         </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+     <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span></code></pre>
+					</li>
+				</ol>
+				<a href="#node-modules" id="node-modules" style="color: inherit; text-decoration: none;">
+					<h2>Node Modules</h2>
+				</a>
+				<ol>
+					<li><p>Run <code>npm install @sourceallies/payment-gateway</code> to install. You can use any package manager you prefer.</p>
+					</li>
+					<li><p>Import the package using the following statement:</p>
+						<pre><code class="language-javascript">     <span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> paymentGateway <span class="hljs-keyword">from</span> <span class="hljs-string">'@sourceallies/payment-gateway'</span>;</code></pre>
+					</li>
+					<li><p>Start calling functions in the package. Here is an example of usage:</p>
+						<pre><code class="language-javascript">     <span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> paymentGateway <span class="hljs-keyword">from</span> <span class="hljs-string">'@sourceallies/payment-gateway'</span>;
+
+     <span class="hljs-keyword">const</span> encryptedPaymentData = paymentGateway.encryptPaymentData(
+         response,
+         authorizeNetApiKey,
+         paymentData
+     );</code></pre>
+					</li>
+				</ol>
+				<blockquote>
+					<p>This package can also be used with TypeScript. The typings are included in the package. This package is bundled using ES module format. We highly recommend you pass in every parameter and property to the functions. Not including parameters or properties can cause unexpected behavior</p>
+				</blockquote>
+				<a href="#extended-usage" id="extended-usage" style="color: inherit; text-decoration: none;">
+					<h1>Extended Usage</h1>
+				</a>
+				<p>After you follow the <a href="#getting-started">Getting Started</a> section, you can begin using the functions included in the package. Here are examples of more extended usages.</p>
+				<a href="#single-transaction" id="single-transaction" style="color: inherit; text-decoration: none;">
+					<h2>Single Transaction</h2>
+				</a>
+				<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">action</span>=<span class="hljs-string">"javascript:handleSubmit()"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"invoice_number"</span>&gt;</span>Invoice Number<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"invoice_number"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"1"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"amount"</span>&gt;</span>Amount<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"amount"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"1.00"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"email_address"</span>&gt;</span>Email<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"email"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"email_address"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"email@email.com"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"cardholder-name"</span>&gt;</span>Cardholder Name<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"cardholder-name"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"FirstName LastName"</span>&gt;</span> 
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"card-number"</span>&gt;</span>Card Number<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"card-number"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">maxlength</span>=<span class="hljs-string">"16"</span> <span class="hljs-attr">minlength</span>=<span class="hljs-string">"16"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"4111111111111111"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"card-expiration"</span>&gt;</span>Card Expiration (eg: 01/21)<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"card-expiration"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">maxlength</span>=<span class="hljs-string">"5"</span> <span class="hljs-attr">minlength</span>=<span class="hljs-string">"4"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"01/23"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"card-code"</span>&gt;</span>Card Code<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"card-code"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">maxlength</span>=<span class="hljs-string">"4"</span> <span class="hljs-attr">minlength</span>=<span class="hljs-string">"3"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"123"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"street-address"</span>&gt;</span>Street Address<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"street-address"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"104 First Street"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"city"</span>&gt;</span>City<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"city"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Urbandale"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"state"</span>&gt;</span>State<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"state"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"IA"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"zipcode"</span>&gt;</span>Zip Code<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"zipcode"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">minlength</span>=<span class="hljs-string">"5"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"12345"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span>&gt;</span>Submit<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>
+    <span class="hljs-attr">src</span>=<span class="hljs-string">"https://jstest.authorize.net/v1/Accept.js"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>
+    <span class="hljs-attr">src</span>=<span class="hljs-string">"https://unpkg.com/@sourceallies/payment-gateway@latest/dist/payment-gateway.umd.js"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+
+    <span class="hljs-comment">// Your information to link the payments to your Payment Gateway account.</span>
+    <span class="hljs-keyword">const</span> gatewayData = {
+        <span class="hljs-attr">partnerName</span>: <span class="hljs-string">"YOUR PARTNER NAME"</span>,
+        <span class="hljs-attr">gatewayName</span>: <span class="hljs-string">"YOUR GATEWAY NAME"</span>
+    };
+
+    <span class="hljs-comment">// Specifies the environment to be used when Payment Gateway makes requests.</span>
+    <span class="hljs-comment">// This can be set to "DEV" or "PROD".</span>
+    <span class="hljs-keyword">const</span> environment = <span class="hljs-string">"DEV"</span>;
+
+    <span class="hljs-comment">// Your key to access Authorize.Net's API.</span>
+    <span class="hljs-keyword">const</span> authorizeNetAPIKey = <span class="hljs-string">"YOUR AUTHORIZE.NET API KEY"</span>;
+
+    <span class="hljs-comment">/**
+     * Handles the result from submitting the transaction with Payment Gateway.
+     */</span>
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">handlePaymentGatewayProcessTransactionResponse</span>(<span class="hljs-params">xmlHttpRequest</span>) </span>{
+        <span class="hljs-keyword">if</span> (xmlHttpRequest &amp;&amp; xmlHttpRequest.status === <span class="hljs-number">200</span>) {
+            <span class="hljs-keyword">const</span> responseBody = <span class="hljs-built_in">JSON</span>.parse(xmlHttp.response);
+
+            <span class="hljs-comment">// Replace this with custom response handling that checks for an "OK"</span>
+            <span class="hljs-comment">// responseCode.</span>
+            <span class="hljs-built_in">console</span>.log(responseBody); 
+        } <span class="hljs-keyword">else</span> {
+            <span class="hljs-comment">// You would end up in this error block if the response from Payment</span>
+            <span class="hljs-comment">// Gateway does not have a status of "200". You will want to handle </span>
+            <span class="hljs-comment">// this case with custom error handling for your website.</span>
+            <span class="hljs-built_in">console</span>.error(<span class="hljs-string">"Error when processing the transaction."</span>);
+        }
+    }
+
+    <span class="hljs-comment">/**
+     * Submits the transaction request to Payment Gateway.
+     */</span>
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">submitTransactionRequest</span>(<span class="hljs-params">response</span>) </span>{
+        <span class="hljs-keyword">if</span> (response.messages.resultCode === <span class="hljs-string">"Error"</span>) {
+            <span class="hljs-built_in">console</span>.error(response.messages.message);
+            <span class="hljs-keyword">return</span>;
+        }
+
+        <span class="hljs-keyword">const</span> amount = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"amount"</span>).value
+
+        <span class="hljs-keyword">const</span> billTo = {
+            <span class="hljs-attr">firstName</span>: <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"first_name"</span>).value,
+            <span class="hljs-attr">lastName</span>: <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"last_name"</span>).value,
+            <span class="hljs-attr">address</span>: <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"address"</span>).value,
+            <span class="hljs-attr">city</span>: <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"city"</span>).value,
+            <span class="hljs-attr">state</span>: <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"state"</span>).value,
+            <span class="hljs-attr">zip</span>: <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"zip_code"</span>).value,
+            <span class="hljs-attr">country</span>: <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"country"</span>).value
+        };
+
+        <span class="hljs-keyword">const</span> customer = {
+            <span class="hljs-attr">email</span>: <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"email"</span>).value
+        };
+
+        <span class="hljs-keyword">const</span> order = {
+            <span class="hljs-attr">description</span>: <span class="hljs-string">"Description"</span>,
+
+            <span class="hljs-comment">// This is not required. If you would like to include it, you can</span>
+            <span class="hljs-comment">// randomly generate it.</span>
+            <span class="hljs-attr">invoiceNumber</span>: <span class="hljs-string">"SOME INVOICE NUMBER"</span>
+        };
+
+        <span class="hljs-keyword">const</span> requestData = paymentGateway.buildRequestData(
+            response, 
+            amount, 
+            billTo, 
+            customer, 
+            order
+        );
+
+        paymentGateway.processTransactionRequest(
+            handlePaymentGatewayProcessTransactionResponse, 
+            requestData, 
+            gatewayData, 
+            environment.toUpperCase() <span class="hljs-comment">/*,
+            optionally pass in lineItems */</span>
+        );
+    };
+
+    <span class="hljs-comment">/**
+     * Handles the response of the HTTP request to obtain an Authorize.Net
+     * cipher key.
+     */</span>
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">handleGetMerchantDetails</span>(<span class="hljs-params">xmlHttpRequest</span>) </span>{
+        <span class="hljs-keyword">if</span> (xmlHttpRequest &amp;&amp; xmlHttpRequest.status &amp;&amp; xmlHttpRequest.status === <span class="hljs-number">200</span>) {
+            <span class="hljs-keyword">const</span> responseBody = <span class="hljs-built_in">JSON</span>.parse(xmlHttpRequest.response);
+
+            <span class="hljs-keyword">if</span> (responseBody.messages.resultCode !== <span class="hljs-string">"OK"</span>) {
+                <span class="hljs-comment">// Replace this with custom error handling for your website.</span>
+                <span class="hljs-built_in">console</span>.error(<span class="hljs-string">"Bad response."</span>);
+                <span class="hljs-comment">// This breaks out of the current function so the code below is not ran.</span>
+                <span class="hljs-keyword">return</span>;
+            }
+
+            <span class="hljs-comment">// This can be either cardData or bankData. This paymentData object</span>
+            <span class="hljs-comment">// is the cardData type.</span>
+            <span class="hljs-keyword">const</span> paymentData = {
+                <span class="hljs-attr">cardNumber</span>: <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"card-number"</span>).value,
+                <span class="hljs-attr">cardExpiration</span>: <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"card-expiration"</span>).value,
+                <span class="hljs-attr">cardCode</span>: <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"card-code"</span>).value,
+                <span class="hljs-attr">fullName</span>: <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"cardholder-name"</span>).value,
+                <span class="hljs-attr">zip</span>: <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"zipcode"</span>).value
+            };
+
+            <span class="hljs-comment">// Encrypts the payment data so it is secure when sending it to Payment Gateway. </span>
+            <span class="hljs-keyword">const</span> secureData = paymentGateway.encryptPaymentData(
+                responseBody,
+                authorizeNetAPIKey,
+                paymentData
+            );
+
+            Accept.dispatchData(secureData, submitTransactionRequest);
+        } <span class="hljs-keyword">else</span> {
+            <span class="hljs-comment">// You would end up in this error block if the response from Payment</span>
+            <span class="hljs-comment">// Gateway does not have a status of "200". You will want to handle</span>
+            <span class="hljs-comment">// this case with custom error handling for your website.</span>
+            <span class="hljs-built_in">console</span>.error(<span class="hljs-string">"Bad response."</span>); 
+        }
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">handleSubmit</span>(<span class="hljs-params"></span>) </span>{
+        paymentGateway.getMerchantDetails(
+            handleGetMerchantDetails,
+            gatewayData,
+            environment
+        );
+    }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre>
+				<a href="#recurring-transacion-subscription" id="recurring-transacion-subscription" style="color: inherit; text-decoration: none;">
+					<h2>Recurring Transacion (Subscription)</h2>
+				</a>
+				<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">action</span>=<span class="hljs-string">"javascript:handleSubmit()"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"invoice_number"</span>&gt;</span>Invoice Number<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"invoice_number"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"1"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"amount"</span>&gt;</span>Amount<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"amount"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"1.00"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"email_address"</span>&gt;</span>Email<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"email"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"email_address"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"email@email.com"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"cardholder-name"</span>&gt;</span>Cardholder Name<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"cardholder-name"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"FirstName LastName"</span>&gt;</span> 
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"card-number"</span>&gt;</span>Card Number<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"card-number"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">maxlength</span>=<span class="hljs-string">"16"</span> <span class="hljs-attr">minlength</span>=<span class="hljs-string">"16"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"4111111111111111"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"card-expiration"</span>&gt;</span>Card Expiration (eg: 01/21)<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"card-expiration"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">maxlength</span>=<span class="hljs-string">"5"</span> <span class="hljs-attr">minlength</span>=<span class="hljs-string">"4"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"01/23"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"card-code"</span>&gt;</span>Card Code<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"card-code"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">maxlength</span>=<span class="hljs-string">"4"</span> <span class="hljs-attr">minlength</span>=<span class="hljs-string">"3"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"123"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"street-address"</span>&gt;</span>Street Address<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"street-address"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"104 First Street"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"city"</span>&gt;</span>City<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"city"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Urbandale"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"state"</span>&gt;</span>State<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"state"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"IA"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"zipcode"</span>&gt;</span>Zip Code<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"zipcode"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">minlength</span>=<span class="hljs-string">"5"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"12345"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"frequency_label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"frequency"</span>&gt;</span>Frequency<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"frequency"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"1"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"1"</span>&gt;</span>Monthly<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"3"</span>&gt;</span>Quarterly<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"6"</span>&gt;</span>Every Six Months<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"12"</span>&gt;</span>Annually<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"payment_number_label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"payment_number"</span>&gt;</span>Number of Payments<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"payment_number"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"1"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"first_payment_date_label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"first_payment_date"</span>&gt;</span>Start Date (mm/dd/yyyy)<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-comment">&lt;!-- Please note that an input of type date has a date picker in Chrome and Firefox, not in Safari or IE --&gt;</span>
+    <span class="hljs-comment">&lt;!-- Also, Chrome and Firefox will store the value as yyyy-mm-dd, where as Safari and IE will store the value as typed by the user --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"date"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"first_payment_date"</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Pick a date for payments to start."</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"mm/dd/yyyy"</span> <span class="hljs-attr">pattern</span>=<span class="hljs-string">"^(((0?[1-9]|1[012])\/(0?[1-9]|1\d|2[0-8])|(0?[13456789]|1[012])\/(29|30)|(0?[13578]|1[02])\/31)\/(19|[2-9]\d)\d{2}|0?2\/29\/((19|[2-9]\d)(0[48]|[2468][048]|[13579][26])|(([2468][048]|[3579][26])00)))$"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"s"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"06/04/2020"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span>&gt;</span>Submit<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>
+    <span class="hljs-attr">src</span>=<span class="hljs-string">"https://jstest.authorize.net/v1/Accept.js"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>
+    <span class="hljs-attr">src</span>=<span class="hljs-string">"https://unpkg.com/@sourceallies/payment-gateway@latest/dist/payment-gateway.umd.js"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+
+    <span class="hljs-comment">// Your information to link the payments to your Payment Gateway account.</span>
+    <span class="hljs-keyword">const</span> gatewayData = {
+        <span class="hljs-attr">partnerName</span>: <span class="hljs-string">"YOUR PARTNER NAME"</span>,
+        <span class="hljs-attr">gatewayName</span>: <span class="hljs-string">"YOUR GATEWAY NAME"</span>
+    };
+
+    <span class="hljs-comment">// Specifies the environment to be used when Payment Gateway makes requests.</span>
+    <span class="hljs-comment">// This can be set to "DEV" or "PROD".</span>
+    <span class="hljs-keyword">const</span> environment = <span class="hljs-string">"DEV"</span>;
+
+    <span class="hljs-comment">// Your key to access Authorize.Net's API.</span>
+    <span class="hljs-keyword">const</span> authorizeNetAPIKey = <span class="hljs-string">"YOUR AUTHORIZE.NET API KEY"</span>;
+
+    <span class="hljs-comment">/**
+     * Handles the result from submitting the subscription with Payment Gateway.
+     */</span>
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">handlePaymentGatewayProcessSubscriptionResponse</span>(<span class="hljs-params">xmlHttpRequest</span>) </span>{
+        <span class="hljs-keyword">if</span> (xmlHttpRequest &amp;&amp; xmlHttpRequest.status &amp;&amp; xmlHttpRequest.status === <span class="hljs-number">200</span>) {
+            <span class="hljs-keyword">const</span> responseBody = <span class="hljs-built_in">JSON</span>.parse(xmlHttp.response);
+            <span class="hljs-comment">// Replace this with custom response handling that checks for an "OK"</span>
+            <span class="hljs-comment">// responseCode. </span>
+            <span class="hljs-built_in">console</span>.log(responseBody);
+        } <span class="hljs-keyword">else</span> {
+            <span class="hljs-comment">// You would end up in this error block if the response from Payment</span>
+            <span class="hljs-comment">// Gateway does not have a status of "200". You will want to handle</span>
+            <span class="hljs-comment">// this case with custom error handling for your website.</span>
+            <span class="hljs-built_in">console</span>.error(<span class="hljs-string">"Error when processing the subscription."</span>);
+        }
+    }
+
+    <span class="hljs-comment">/**
+     * Submits the subscription request to Payment Gateway.
+     */</span>
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">submitSubscriptionRequest</span>(<span class="hljs-params">response</span>) </span>{
+        <span class="hljs-keyword">if</span> (response.messages.resultCode === <span class="hljs-string">"Error"</span>) {
+            <span class="hljs-built_in">console</span>.error(response.messages.message);
+            <span class="hljs-keyword">return</span>;
+        }
+
+        <span class="hljs-keyword">const</span> amount = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"amount"</span>).value;
+
+        <span class="hljs-keyword">const</span> billTo = {
+            <span class="hljs-attr">firstName</span>: <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"first_name"</span>).value,
+            <span class="hljs-attr">lastName</span>: <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"last_name"</span>).value,
+            <span class="hljs-attr">address</span>: <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"address"</span>).value,
+            <span class="hljs-attr">city</span>: <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"city"</span>).value,
+            <span class="hljs-attr">state</span>: <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"state"</span>).value,
+            <span class="hljs-attr">zip</span>: <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"zip_code"</span>).value,
+            <span class="hljs-attr">country</span>: <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"country"</span>).value
+        };
+
+        <span class="hljs-keyword">const</span> customer = {
+            <span class="hljs-attr">email</span>: <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"email"</span>).value
+        };
+
+        <span class="hljs-keyword">const</span> order = {
+            <span class="hljs-attr">description</span>: <span class="hljs-string">"Description"</span>,
+            <span class="hljs-comment">// This is not required. If you would like to include it, you can</span>
+            <span class="hljs-comment">// randomly generate it.</span>
+            <span class="hljs-attr">invoiceNumber</span>: <span class="hljs-string">"SOME INVOICE NUMBER"</span> 
+        };
+
+        <span class="hljs-keyword">const</span> paymentSchedule = {
+            <span class="hljs-attr">interval</span>: {
+                <span class="hljs-attr">length</span>: <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"frequency"</span>).value,
+                <span class="hljs-attr">unit</span>: <span class="hljs-string">"MONTHS"</span>
+            },
+            <span class="hljs-attr">startDate</span>: <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"first_payment_date"</span>).value,
+            <span class="hljs-attr">totalOccurrences</span>: <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"payment_number"</span>).value
+        };
+
+        <span class="hljs-keyword">const</span> requestData = paymentGateway.buildRequestData(
+            response,
+            amount,
+            billTo,
+            customer,
+            order
+        );
+
+        paymentGateway.processSubscriptionRequest(
+            handlePaymentGatewayProcessSubscriptionResponse, 
+            requestData, 
+            gatewayData, 
+            paymentSchedule,
+            environment.toUpperCase() <span class="hljs-comment">/*,
+            optionally pass in lineItems */</span>
+        );
+    };
+
+    <span class="hljs-comment">/**
+     * Handles the response of the HTTP request to obtain an Authorize.Net
+     * cipher key.
+     */</span>
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">handleGetMerchantDetails</span>(<span class="hljs-params">xmlHttpRequest</span>) </span>{
+       <span class="hljs-keyword">if</span> (xmlHttpRequest &amp;&amp; xmlHttpRequest.status === <span class="hljs-number">200</span>) {
+           <span class="hljs-keyword">const</span> responseBody = <span class="hljs-built_in">JSON</span>.parse(xmlHttpRequest.response);
+
+            <span class="hljs-keyword">if</span> (responseBody.messages.resultCode !== <span class="hljs-string">"OK"</span>) {
+                <span class="hljs-comment">// Replace this with custom error handling for your website.</span>
+                <span class="hljs-built_in">console</span>.error(<span class="hljs-string">"Bad response."</span>); 
+                <span class="hljs-comment">// This breaks out of the current function so the code below is not ran.</span>
+                <span class="hljs-keyword">return</span>; 
+            }
+
+            <span class="hljs-comment">// This can be either cardData or bankData. This paymentData object</span>
+            <span class="hljs-comment">// is the cardData type.</span>
+            <span class="hljs-keyword">const</span> paymentData = {
+                <span class="hljs-attr">cardNumber</span>: <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"card-number"</span>).value,
+                <span class="hljs-attr">cardExpiration</span>: <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"card-expiration"</span>).value,
+                <span class="hljs-attr">cardCode</span>: <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"card-code"</span>).value,
+                <span class="hljs-attr">fullName</span>: <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"cardholder-name"</span>).value,
+                <span class="hljs-attr">zip</span>: <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"zipcode"</span>).value
+            };
+
+            <span class="hljs-comment">// Encrypts the payment data so it is secure when sending it to Payment Gateway. </span>
+            <span class="hljs-keyword">const</span> secureData = paymentGateway.encryptPaymentData(
+                responseBody,
+                authorizeNetAPIKey,
+                paymentData
+            );
+
+            Accept.dispatchData(secureData, submitSubscriptionRequest);
+        } <span class="hljs-keyword">else</span> {
+            <span class="hljs-comment">// You would end up in this error block if the response from Payment</span>
+            <span class="hljs-comment">// Gateway does not have a status of "200". You will want to handle</span>
+            <span class="hljs-comment">// this case with custom error handling for your website.</span>
+            <span class="hljs-built_in">console</span>.error(<span class="hljs-string">"Bad response."</span>); 
+        }
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">handleSubmit</span>(<span class="hljs-params"></span>) </span>{
+        paymentGateway.getMerchantDetails(
+            handleGetMerchantDetails,
+            gatewayData,
+            environment
+        );
+    }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre>
+			</div>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="globals.html"><em>Globals</em></a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-enum">
+						<a href="enums/environment.html" class="tsd-kind-icon">Environment</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/authdata.html" class="tsd-kind-icon">Auth<wbr>Data</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/bankdata.html" class="tsd-kind-icon">Bank<wbr>Data</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/billto.html" class="tsd-kind-icon">Bill<wbr>To</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/carddata.html" class="tsd-kind-icon">Card<wbr>Data</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/customer.html" class="tsd-kind-icon">Customer</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/gatewaydata.html" class="tsd-kind-icon">Gateway<wbr>Data</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/interval.html" class="tsd-kind-icon">Interval</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/lineitemsingle.html" class="tsd-kind-icon">Line<wbr>Item<wbr>Single</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/lineitemsrecurring.html" class="tsd-kind-icon">Line<wbr>Items<wbr>Recurring</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/lineitemssingle.html" class="tsd-kind-icon">Line<wbr>Items<wbr>Single</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/order.html" class="tsd-kind-icon">Order</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/parsedcarddata.html" class="tsd-kind-icon">Parsed<wbr>Card<wbr>Data</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/payment.html" class="tsd-kind-icon">Payment</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/paymentschedule.html" class="tsd-kind-icon">Payment<wbr>Schedule</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/requestdata.html" class="tsd-kind-icon">Request<wbr>Data</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/securedata.html" class="tsd-kind-icon">Secure<wbr>Data</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/subscription.html" class="tsd-kind-icon">Subscription</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/subscriptiondata.html" class="tsd-kind-icon">Subscription<wbr>Data</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/transactiondata.html" class="tsd-kind-icon">Transaction<wbr>Data</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/transactionrequest.html" class="tsd-kind-icon">Transaction<wbr>Request</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/validationdata.html" class="tsd-kind-icon">Validation<wbr>Data</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#auth_capture_transaction" class="tsd-kind-icon">AUTH_<wbr>CAPTURE_<wbr>TRANSACTION</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#buildapplepaytransactionrequestdata" class="tsd-kind-icon">build<wbr>Apple<wbr>Pay<wbr>Transaction<wbr>Request<wbr>Data</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#buildapplepayvalidationrequestdata" class="tsd-kind-icon">build<wbr>Apple<wbr>Pay<wbr>Validation<wbr>Request<wbr>Data</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#buildgooglepaytransactionrequestdata" class="tsd-kind-icon">build<wbr>Google<wbr>Pay<wbr>Transaction<wbr>Request<wbr>Data</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#buildrequestdata" class="tsd-kind-icon">build<wbr>Request<wbr>Data</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#buildsubscriptionrequestdata" class="tsd-kind-icon">build<wbr>Subscription<wbr>Request<wbr>Data</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#buildtransactionrequestdata" class="tsd-kind-icon">build<wbr>Transaction<wbr>Request<wbr>Data</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#encryptpaymentdata" class="tsd-kind-icon">encrypt<wbr>Payment<wbr>Data</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#getmerchantdetails" class="tsd-kind-icon">get<wbr>Merchant<wbr>Details</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#processapplepaytransactionrequest" class="tsd-kind-icon">process<wbr>Apple<wbr>Pay<wbr>Transaction<wbr>Request</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#processapplepayvalidationrequest" class="tsd-kind-icon">process<wbr>Apple<wbr>Pay<wbr>Validation<wbr>Request</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#processgooglepaytransactionrequest" class="tsd-kind-icon">process<wbr>Google<wbr>Pay<wbr>Transaction<wbr>Request</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#processsubscription" class="tsd-kind-icon">process<wbr>Subscription</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#processsubscriptionrequest" class="tsd-kind-icon">process<wbr>Subscription<wbr>Request</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#processtransaction" class="tsd-kind-icon">process<wbr>Transaction</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#processtransactionrequest" class="tsd-kind-icon">process<wbr>Transaction<wbr>Request</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#validateapplepayrequest" class="tsd-kind-icon">validate<wbr>Apple<wbr>Pay<wbr>Request</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a>, the 6/29/2020 at 7:38:50 PM</p>
+</div>
+<div class="overlay"></div>
+<script src="assets/js/main.js"></script>
+</body></html>

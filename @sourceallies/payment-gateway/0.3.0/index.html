@@ -1,0 +1,328 @@
+<!DOCTYPE html><html class="default no-js"><head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>@sourceallies/payment-gateway - v0.3.0</title>
+	<meta name="description" content="Documentation for @sourceallies/payment-gateway - v0.3.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/main.css">
+<link rel="icon" href="favicon.png"></head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="assets/js/search.json" data-base=".">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text">
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="index.html" class="title">@sourceallies/payment-gateway - v0.3.0</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked="">
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-only-exported">
+							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="globals.html">Globals</a>
+				</li>
+			</ul>
+			<h1>@sourceallies/payment-gateway - v0.3.0</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<div class="tsd-panel tsd-typography">
+				<a href="#payment-gateway-javascript-client-library" id="payment-gateway-javascript-client-library" style="color: inherit; text-decoration: none;">
+					<h1>Payment Gateway JavaScript Client Library</h1>
+				</a>
+				<ul>
+					<li><a href="#payment-gateway-javascript-client-library">Payment Gateway JavaScript Client Library</a></li>
+					<li><a href="#introduction">Introduction</a></li>
+					<li><a href="#getting-started">Getting Started</a><ul>
+							<li><a href="#in-html-file">In HTML File</a></li>
+							<li><a href="#node-modules">Node Modules</a></li>
+						</ul>
+					</li>
+					<li><a href="#extended-usage">Extended Usage</a><ul>
+							<li><a href="#single-transaction">Single Transaction</a><ul>
+									<li><a href="#html">HTML</a></li>
+									<li><a href="#node">Node</a></li>
+								</ul>
+							</li>
+							<li><a href="#recurring-transacion-subscription">Recurring Transacion (Subscription)</a><ul>
+									<li><a href="#html-1">HTML</a></li>
+									<li><a href="#node-1">Node</a></li>
+								</ul>
+							</li>
+							<li><a href="#google-pay-transaction">Google Pay Transaction</a><ul>
+									<li><a href="#html-2">HTML</a></li>
+									<li><a href="#node-2">Node</a></li>
+								</ul>
+							</li>
+							<li><a href="#apple-pay-transaction">Apple Pay Transaction</a><ul>
+									<li><a href="#html-3">HTML</a></li>
+									<li><a href="#node-3">Node</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<a href="#introduction" id="introduction" style="color: inherit; text-decoration: none;">
+					<h1>Introduction</h1>
+				</a>
+				<p>NPM package used to interface your website with <a href="https://www.sourceallies.com/payment-gateway">Source Allies Payment Gateway</a>. The developer documentation can be found <a href="https://sourceallies.github.io/payment-gateway-js/index.html">here</a>.</p>
+				<a href="#getting-started" id="getting-started" style="color: inherit; text-decoration: none;">
+					<h1>Getting Started</h1>
+				</a>
+				<a href="#in-html-file" id="in-html-file" style="color: inherit; text-decoration: none;">
+					<h2>In HTML File</h2>
+				</a>
+				<ol>
+					<li><p>Add a <code>&lt;script&gt;</code> tag in the head of your html file that references the published JavaScript bundle.</p>
+						<pre><code class="language-html"> <span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+     <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+         <span class="hljs-tag">&lt;<span class="hljs-name">script</span>
+             <span class="hljs-attr">src</span>=<span class="hljs-string">"https://unpkg.com/@sourceallies/payment-gateway/dist/payment-gateway.umd.js"</span>
+         &gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+     <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span></code></pre>
+					</li>
+					<li><p>You can then start calling the functions in the form of <code>paymentGateway.FUNCTION_NAME()</code>. Here is an example of usage:</p>
+						<pre><code class="language-html"> <span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+     <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+         <span class="hljs-tag">&lt;<span class="hljs-name">script</span>
+             <span class="hljs-attr">src</span>=<span class="hljs-string">"https://unpkg.com/@sourceallies/payment-gateway/dist/payment-gateway.umd.js"</span>
+         &gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+         <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+             <span class="hljs-keyword">const</span> encryptedPaymentData = 
+                 paymentGateway.encryptPaymentData(response, authorizeNetApiKey paymentData);
+         </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+     <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span></code></pre>
+					</li>
+				</ol>
+				<a href="#node-modules" id="node-modules" style="color: inherit; text-decoration: none;">
+					<h2>Node Modules</h2>
+				</a>
+				<ol>
+					<li><p>Run <code>npm install @sourceallies/payment-gateway</code> to install. You can use any package manager you prefer.</p>
+					</li>
+					<li><p>Import the package using the following statement:</p>
+						<pre><code class="language-javascript">     <span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> paymentGateway <span class="hljs-keyword">from</span> <span class="hljs-string">'@sourceallies/payment-gateway'</span>;</code></pre>
+					</li>
+					<li><p>Start calling functions in the package. Here is an example of usage:</p>
+						<pre><code class="language-javascript">     <span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> paymentGateway <span class="hljs-keyword">from</span> <span class="hljs-string">'@sourceallies/payment-gateway'</span>;
+
+     <span class="hljs-keyword">const</span> encryptedPaymentData = 
+         paymentGateway.encryptPaymentData(response, authorizeNetApiKey paymentData);
+</code></pre>
+					</li>
+				</ol>
+				<p>*NOTE: This package can also be used with TypeScript. The typings are included in the package. This package is bundled using ES module format. We highly recommend you pass in every parameter and property to the functions. Not including parameters or properties can cause unexpected behavior</p>
+				<a href="#extended-usage" id="extended-usage" style="color: inherit; text-decoration: none;">
+					<h1>Extended Usage</h1>
+				</a>
+				<p>After you follow the <a href="#getting-started">Getting Started</a> section, you can begin using the functions included in the package. Here are examples of more extended usages.</p>
+				<a href="#single-transaction" id="single-transaction" style="color: inherit; text-decoration: none;">
+					<h2>Single Transaction</h2>
+				</a>
+				<a href="#html" id="html" style="color: inherit; text-decoration: none;">
+					<h3>HTML</h3>
+				</a>
+				<a href="#node" id="node" style="color: inherit; text-decoration: none;">
+					<h3>Node</h3>
+				</a>
+				<a href="#recurring-transacion-subscription" id="recurring-transacion-subscription" style="color: inherit; text-decoration: none;">
+					<h2>Recurring Transacion (Subscription)</h2>
+				</a>
+				<a href="#html-1" id="html-1" style="color: inherit; text-decoration: none;">
+					<h3>HTML</h3>
+				</a>
+				<a href="#node-1" id="node-1" style="color: inherit; text-decoration: none;">
+					<h3>Node</h3>
+				</a>
+				<a href="#google-pay-transaction" id="google-pay-transaction" style="color: inherit; text-decoration: none;">
+					<h2>Google Pay Transaction</h2>
+				</a>
+				<a href="#html-2" id="html-2" style="color: inherit; text-decoration: none;">
+					<h3>HTML</h3>
+				</a>
+				<a href="#node-2" id="node-2" style="color: inherit; text-decoration: none;">
+					<h3>Node</h3>
+				</a>
+				<a href="#apple-pay-transaction" id="apple-pay-transaction" style="color: inherit; text-decoration: none;">
+					<h2>Apple Pay Transaction</h2>
+				</a>
+				<a href="#html-3" id="html-3" style="color: inherit; text-decoration: none;">
+					<h3>HTML</h3>
+				</a>
+				<a href="#node-3" id="node-3" style="color: inherit; text-decoration: none;">
+					<h3>Node</h3>
+				</a>
+			</div>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="globals.html"><em>Globals</em></a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-enum">
+						<a href="enums/environment.html" class="tsd-kind-icon">Environment</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/authdata.html" class="tsd-kind-icon">Auth<wbr>Data</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/bankdata.html" class="tsd-kind-icon">Bank<wbr>Data</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/billto.html" class="tsd-kind-icon">Bill<wbr>To</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/carddata.html" class="tsd-kind-icon">Card<wbr>Data</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/customer.html" class="tsd-kind-icon">Customer</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/gatewaydata.html" class="tsd-kind-icon">Gateway<wbr>Data</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/interval.html" class="tsd-kind-icon">Interval</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/lineitemsingle.html" class="tsd-kind-icon">Line<wbr>Item<wbr>Single</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/lineitemsrecurring.html" class="tsd-kind-icon">Line<wbr>Items<wbr>Recurring</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/lineitemssingle.html" class="tsd-kind-icon">Line<wbr>Items<wbr>Single</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/order.html" class="tsd-kind-icon">Order</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/parsedcarddata.html" class="tsd-kind-icon">Parsed<wbr>Card<wbr>Data</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/payment.html" class="tsd-kind-icon">Payment</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/paymentschedule.html" class="tsd-kind-icon">Payment<wbr>Schedule</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/requestdata.html" class="tsd-kind-icon">Request<wbr>Data</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/securedata.html" class="tsd-kind-icon">Secure<wbr>Data</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/subscription.html" class="tsd-kind-icon">Subscription</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/subscriptiondata.html" class="tsd-kind-icon">Subscription<wbr>Data</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/transactiondata.html" class="tsd-kind-icon">Transaction<wbr>Data</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/transactionrequest.html" class="tsd-kind-icon">Transaction<wbr>Request</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#auth_capture_transaction" class="tsd-kind-icon">AUTH_<wbr>CAPTURE_<wbr>TRANSACTION</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#buildapplepaytransactionrequestdata" class="tsd-kind-icon">build<wbr>Apple<wbr>Pay<wbr>Transaction<wbr>Request<wbr>Data</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#buildgooglepaytransactionrequestdata" class="tsd-kind-icon">build<wbr>Google<wbr>Pay<wbr>Transaction<wbr>Request<wbr>Data</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#buildrequestdata" class="tsd-kind-icon">build<wbr>Request<wbr>Data</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#buildsubscriptionrequestdata" class="tsd-kind-icon">build<wbr>Subscription<wbr>Request<wbr>Data</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#buildtransactionrequestdata" class="tsd-kind-icon">build<wbr>Transaction<wbr>Request<wbr>Data</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#encryptpaymentdata" class="tsd-kind-icon">encrypt<wbr>Payment<wbr>Data</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#getmerchantdetails" class="tsd-kind-icon">get<wbr>Merchant<wbr>Details</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#processapplepaytransactionrequest" class="tsd-kind-icon">process<wbr>Apple<wbr>Pay<wbr>Transaction<wbr>Request</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#processgooglepaytransactionrequest" class="tsd-kind-icon">process<wbr>Google<wbr>Pay<wbr>Transaction<wbr>Request</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#processsubscription" class="tsd-kind-icon">process<wbr>Subscription</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#processsubscriptionrequest" class="tsd-kind-icon">process<wbr>Subscription<wbr>Request</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#processtransaction" class="tsd-kind-icon">process<wbr>Transaction</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#processtransactionrequest" class="tsd-kind-icon">process<wbr>Transaction<wbr>Request</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a>, the 6/2/2020 at 10:01:04 AM</p>
+</div>
+<div class="overlay"></div>
+<script src="assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="assets/js/search.js"><' + '/script>');</script>
+</body></html>
