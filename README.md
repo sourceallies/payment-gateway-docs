@@ -10,8 +10,8 @@ This repo is used only for hosting our documentation pages. This repo may also b
 
 The following are the URLs to the documentation for our Payment Gateway javascript packages. If you are looking for a specific version, replace `latest` with the version you are looking for. If the version does not have docs, please do not use that version as it is deprecated.
 
-@sourceallies/payment-gateway: [https://sourceallies.github.io/payment-gateway-docs/@sourceallies/payment-gateway/latest/index.html](https://sourceallies.github.io/payment-gateway-docs/@sourceallies/payment-gateway/latest/index.html)
-@sourceallies/payment-gateway-form: [https://sourceallies.github.io/payment-gateway-docs/@sourceallies/payment-gateway-form/latest/index.html](https://sourceallies.github.io/payment-gateway-docs/@sourceallies/payment-gateway-form/latest/index.html)
+- @sourceallies/payment-gateway: [https://sourceallies.github.io/payment-gateway-docs/@sourceallies/payment-gateway/latest/index.html](https://sourceallies.github.io/payment-gateway-docs/@sourceallies/payment-gateway/latest/index.html)
+- @sourceallies/payment-gateway-form: [https://sourceallies.github.io/payment-gateway-docs/@sourceallies/payment-gateway-form/latest/index.html](https://sourceallies.github.io/payment-gateway-docs/@sourceallies/payment-gateway-form/latest/index.html)
 
 
 # Note
