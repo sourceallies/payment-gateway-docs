@@ -1,14 +1,11 @@
-<!doctype html>
-<html class="default no-js">
-<head>
+<!DOCTYPE html><html class="default no-js"><head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>@sourceallies/payment-gateway - v0.3.5</title>
-	<meta name="description" content="Documentation for @sourceallies/payment-gateway - v0.3.5">
+	<title>@sourceallies/payment-gateway - v0.4.0</title>
+	<meta name="description" content="Documentation for @sourceallies/payment-gateway - v0.4.0">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="assets/css/main.css">
-	<link rel="icon" href="favicon.png" />
-</head>
+<link rel="icon" href="favicon.png"></head>
 <body>
 <header>
 	<div class="tsd-page-toolbar">
@@ -17,13 +14,13 @@
 				<div class="table-cell" id="tsd-search" data-index="assets/js/search.json" data-base=".">
 					<div class="field">
 						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
-						<input id="tsd-search-field" type="text" />
+						<input id="tsd-search-field" type="text">
 					</div>
 					<ul class="results">
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="index.html" class="title">@sourceallies/payment-gateway - v0.3.5</a>
+					<a href="index.html" class="title">@sourceallies/payment-gateway - v0.4.0</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -37,9 +34,9 @@
 									<li data-value="private" class="selected">All</li>
 								</ul>
 							</div>
-							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<input type="checkbox" id="tsd-filter-inherited" checked="">
 							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
-							<input type="checkbox" id="tsd-filter-only-exported" />
+							<input type="checkbox" id="tsd-filter-only-exported">
 							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
 						</div>
 					</div>
@@ -55,7 +52,7 @@
 					<a href="globals.html">Globals</a>
 				</li>
 			</ul>
-			<h1>@sourceallies/payment-gateway - v0.3.5</h1>
+			<h1>@sourceallies/payment-gateway - v0.4.0</h1>
 		</div>
 	</div>
 </header>
@@ -100,9 +97,17 @@
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
+							<h3>Type aliases</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-type-alias"><a href="globals.html#accounttype" class="tsd-kind-icon">Account<wbr>Type</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
 							<h3>Variables</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-variable"><a href="globals.html#auth_capture_transaction" class="tsd-kind-icon">AUTH_<wbr>CAPTURE_<wbr>TRANSACTION</a></li>
+								<li class="tsd-kind-variable"><a href="globals.html#numbers_regex" class="tsd-kind-icon">NUMBERS_<wbr>REGEX</a></li>
+								<li class="tsd-kind-variable"><a href="globals.html#chance" class="tsd-kind-icon">chance</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
@@ -116,6 +121,9 @@
 								<li class="tsd-kind-function"><a href="globals.html#buildtransactionrequestdata" class="tsd-kind-icon">build<wbr>Transaction<wbr>Request<wbr>Data</a></li>
 								<li class="tsd-kind-function"><a href="globals.html#encryptpaymentdata" class="tsd-kind-icon">encrypt<wbr>Payment<wbr>Data</a></li>
 								<li class="tsd-kind-function"><a href="globals.html#getmerchantdetails" class="tsd-kind-icon">get<wbr>Merchant<wbr>Details</a></li>
+								<li class="tsd-kind-function"><a href="globals.html#isbankdatavalid" class="tsd-kind-icon">is<wbr>Bank<wbr>Data<wbr>Valid</a></li>
+								<li class="tsd-kind-function"><a href="globals.html#iscarddatavalid" class="tsd-kind-icon">is<wbr>Card<wbr>Data<wbr>Valid</a></li>
+								<li class="tsd-kind-function"><a href="globals.html#passesluhnalgorithm" class="tsd-kind-icon">passes<wbr>Luhn<wbr>Algorithm</a></li>
 								<li class="tsd-kind-function"><a href="globals.html#processapplepaytransactionrequest" class="tsd-kind-icon">process<wbr>Apple<wbr>Pay<wbr>Transaction<wbr>Request</a></li>
 								<li class="tsd-kind-function"><a href="globals.html#processapplepayvalidationrequest" class="tsd-kind-icon">process<wbr>Apple<wbr>Pay<wbr>Validation<wbr>Request</a></li>
 								<li class="tsd-kind-function"><a href="globals.html#processgooglepaytransactionrequest" class="tsd-kind-icon">process<wbr>Google<wbr>Pay<wbr>Transaction<wbr>Request</a></li>
@@ -130,14 +138,27 @@
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Type aliases</h2>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias">
+					<a name="accounttype" class="tsd-anchor"></a>
+					<h3>Account<wbr>Type</h3>
+					<div class="tsd-signature tsd-kind-icon">Account<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"checking"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"savings"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"businessChecking"</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/SourceAllies/payment-gateway-js/blob/cb564f9/packages/payment-gateway/src/types/common.ts#L28">types/common.ts:28</a></li>
+						</ul>
+					</aside>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Variables</h2>
 				<section class="tsd-panel tsd-member tsd-kind-variable">
 					<a name="auth_capture_transaction" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagConst">Const</span> AUTH_<wbr>CAPTURE_<wbr>TRANSACTION</h3>
-					<div class="tsd-signature tsd-kind-icon">AUTH_<wbr>CAPTURE_<wbr>TRANSACTION<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"authCaptureTransaction"</span><span class="tsd-signature-symbol"> = &quot;authCaptureTransaction&quot;</span></div>
+					<div class="tsd-signature tsd-kind-icon">AUTH_<wbr>CAPTURE_<wbr>TRANSACTION<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"authCaptureTransaction"</span><span class="tsd-signature-symbol"> = "authCaptureTransaction"</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/sourceallies/payment-gateway-js/blob/311d329/packages/payment-gateway/src/transactions/singleTransaction.ts#L28">transactions/singleTransaction.ts:28</a></li>
+							<li>Defined in <a href="https://github.com/SourceAllies/payment-gateway-js/blob/cb564f9/packages/payment-gateway/src/transactions/singleTransaction.ts#L28">transactions/singleTransaction.ts:28</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -148,6 +169,26 @@
 							<a href="interfaces/transactionrequest.html#transactiontype">TransactionRequest.transactionType</a>.</p>
 						</div>
 					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable">
+					<a name="numbers_regex" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> NUMBERS_<wbr>REGEX</h3>
+					<div class="tsd-signature tsd-kind-icon">NUMBERS_<wbr>REGEX<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^[0-9]+$/</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/SourceAllies/payment-gateway-js/blob/cb564f9/packages/payment-gateway/src/transactions/common.ts#L15">transactions/common.ts:15</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable">
+					<a name="chance" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> chance</h3>
+					<div class="tsd-signature tsd-kind-icon">chance<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Chance</span><span class="tsd-signature-symbol"> = new Chance()</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/SourceAllies/payment-gateway-js/blob/cb564f9/packages/payment-gateway/src/transactions/common.spec.ts#L23">transactions/common.spec.ts:23</a></li>
+						</ul>
+					</aside>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
@@ -162,14 +203,14 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/sourceallies/payment-gateway-js/blob/311d329/packages/payment-gateway/src/transactions/singleTransaction.ts#L403">transactions/singleTransaction.ts:403</a></li>
+									<li>Defined in <a href="https://github.com/SourceAllies/payment-gateway-js/blob/cb564f9/packages/payment-gateway/src/transactions/singleTransaction.ts#L403">transactions/singleTransaction.ts:403</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Creates the <a href="interfaces/transactiondata.html">TransactionData</a> object with the correct fields.
 										<code>paymentData</code> is derived from the argument of the function you define for
-										Apple Pay&#39;s <code>applePaySession.onpaymentauthorized</code> function. Apple Pay will
+										Apple Pay's <code>applePaySession.onpaymentauthorized</code> function. Apple Pay will
 										pass in an event to the function you defined. This event will have a property
 										called <code>payment</code>. <code>event.payment</code> is what needs to be passed as the
 									<code>paymentData</code> argument of this function.</p>
@@ -189,8 +230,8 @@
 								the following one will be added as a line item:</p>
 								<pre><code class="language-javascript"> listItems = [
      {
-         <span class="hljs-attr">itemId</span>: <span class="hljs-string">&#x27;invoice&#x27;</span>,
-         <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Invoice Payment&#x27;</span>,
+         <span class="hljs-attr">itemId</span>: <span class="hljs-string">'invoice'</span>,
+         <span class="hljs-attr">name</span>: <span class="hljs-string">'Invoice Payment'</span>,
          <span class="hljs-attr">unitPrice</span>: <span class="hljs-built_in">parseFloat</span>(requestData.amount),
          <span class="hljs-attr">quantity</span>: <span class="hljs-number">1</span>
      }
@@ -205,7 +246,7 @@
 								<li>
 									<h5>paymentData: <span class="tsd-signature-type">ApplePayPayment</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<pre><code> The argument passed <span class="hljs-keyword">into</span> Apple<span class="hljs-comment">&#x27;s `applePaySession.onpaymentauthorized`</span>
+										<pre><code> The argument passed <span class="hljs-keyword">into</span> Apple<span class="hljs-comment">'s `applePaySession.onpaymentauthorized`</span>
  <span class="hljs-keyword">function</span>.</code></pre>
 									</div>
 								</li>
@@ -265,7 +306,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/sourceallies/payment-gateway-js/blob/311d329/packages/payment-gateway/src/transactions/singleTransaction.ts#L591">transactions/singleTransaction.ts:591</a></li>
+									<li>Defined in <a href="https://github.com/SourceAllies/payment-gateway-js/blob/cb564f9/packages/payment-gateway/src/transactions/singleTransaction.ts#L591">transactions/singleTransaction.ts:591</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -331,13 +372,13 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/sourceallies/payment-gateway-js/blob/311d329/packages/payment-gateway/src/transactions/singleTransaction.ts#L224">transactions/singleTransaction.ts:224</a></li>
+									<li>Defined in <a href="https://github.com/SourceAllies/payment-gateway-js/blob/cb564f9/packages/payment-gateway/src/transactions/singleTransaction.ts#L224">transactions/singleTransaction.ts:224</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Creates the <a href="interfaces/transactiondata.html">TransactionData</a> object with the correct fields.
-									paymentData is generated from Google&#39;s <code>paymentsClient.loadPaymentData()</code>.</p>
+									paymentData is generated from Google's <code>paymentsClient.loadPaymentData()</code>.</p>
 								</div>
 								<p>If you do not specify the <code>billTo</code> parameter, the following properties are
 								required for <code>paymentData</code> (Google Pay may not set these properties):</p>
@@ -355,8 +396,8 @@
 								the following one will be added as a line item:</p>
 								<pre><code class="language-javascript"> lineItems = [
      {
-         <span class="hljs-attr">itemId</span>: <span class="hljs-string">&#x27;invoice&#x27;</span>,
-         <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Invoice Payment&#x27;</span>,
+         <span class="hljs-attr">itemId</span>: <span class="hljs-string">'invoice'</span>,
+         <span class="hljs-attr">name</span>: <span class="hljs-string">'Invoice Payment'</span>,
          <span class="hljs-attr">unitPrice</span>: <span class="hljs-built_in">parseFloat</span>(requestData.amount),
          <span class="hljs-attr">quantity</span>: <span class="hljs-number">1</span>
      }
@@ -371,7 +412,7 @@
 								<li>
 									<h5>paymentData: <span class="tsd-signature-type">PaymentData</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<pre><code> The <span class="hljs-built_in">object</span> returned <span class="hljs-keyword">from</span> Google<span class="hljs-comment">&#x27;s `paymentsClient.loadPaymentData()`.</span></code></pre>
+										<pre><code> The <span class="hljs-built_in">object</span> returned <span class="hljs-keyword">from</span> Google<span class="hljs-comment">'s `paymentsClient.loadPaymentData()`.</span></code></pre>
 									</div>
 								</li>
 								<li>
@@ -431,7 +472,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/sourceallies/payment-gateway-js/blob/311d329/packages/payment-gateway/src/transactions/common.ts#L128">transactions/common.ts:128</a></li>
+									<li>Defined in <a href="https://github.com/SourceAllies/payment-gateway-js/blob/cb564f9/packages/payment-gateway/src/transactions/common.ts#L130">transactions/common.ts:130</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -467,13 +508,13 @@
 								<li>
 									<h5>billTo: <a href="interfaces/billto.html" class="tsd-signature-type">BillTo</a></h5>
 									<div class="tsd-comment tsd-typography">
-										<pre><code> The payee<span class="hljs-symbol">&#x27;s</span> billing information.</code></pre>
+										<pre><code> The payee<span class="hljs-symbol">'s</span> billing information.</code></pre>
 									</div>
 								</li>
 								<li>
 									<h5>customer: <a href="interfaces/customer.html" class="tsd-signature-type">Customer</a></h5>
 									<div class="tsd-comment tsd-typography">
-										<pre><code> The payee<span class="hljs-symbol">&#x27;s</span> customer information.</code></pre>
+										<pre><code> The payee<span class="hljs-symbol">'s</span> customer information.</code></pre>
 									</div>
 								</li>
 								<li>
@@ -505,7 +546,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/sourceallies/payment-gateway-js/blob/311d329/packages/payment-gateway/src/transactions/recurringTransaction.ts#L68">transactions/recurringTransaction.ts:68</a></li>
+									<li>Defined in <a href="https://github.com/SourceAllies/payment-gateway-js/blob/cb564f9/packages/payment-gateway/src/transactions/recurringTransaction.ts#L68">transactions/recurringTransaction.ts:68</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -517,10 +558,10 @@
 								added as a line item:</p>
 								<pre><code class="language-javascript"> listItems = [
      {
-         <span class="hljs-attr">itemCode</span>: <span class="hljs-string">&#x27;invoice&#x27;</span>,
-         <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Invoice Payment&#x27;</span>,
+         <span class="hljs-attr">itemCode</span>: <span class="hljs-string">'invoice'</span>,
+         <span class="hljs-attr">name</span>: <span class="hljs-string">'Invoice Payment'</span>,
          <span class="hljs-attr">amount</span>: <span class="hljs-built_in">parseFloat</span>(requestData.amount),
-         <span class="hljs-attr">description</span>: <span class="hljs-string">&#x27;invoice payment&#x27;</span>
+         <span class="hljs-attr">description</span>: <span class="hljs-string">'invoice payment'</span>
      }
  ];</code></pre>
 								<p>This requires <code>requestData.amount</code> to be able to be parsed to a float. If it
@@ -570,7 +611,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/sourceallies/payment-gateway-js/blob/311d329/packages/payment-gateway/src/transactions/singleTransaction.ts#L96">transactions/singleTransaction.ts:96</a></li>
+									<li>Defined in <a href="https://github.com/SourceAllies/payment-gateway-js/blob/cb564f9/packages/payment-gateway/src/transactions/singleTransaction.ts#L96">transactions/singleTransaction.ts:96</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -581,8 +622,8 @@
 									added as a line item:</p>
 									<pre><code class="language-javascript"> lineItems = [
      {
-         <span class="hljs-attr">itemId</span>: <span class="hljs-string">&#x27;invoice&#x27;</span>,
-         <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Invoice Payment&#x27;</span>,
+         <span class="hljs-attr">itemId</span>: <span class="hljs-string">'invoice'</span>,
+         <span class="hljs-attr">name</span>: <span class="hljs-string">'Invoice Payment'</span>,
          <span class="hljs-attr">unitPrice</span>: <span class="hljs-built_in">parseFloat</span>(requestData.amount),
          <span class="hljs-attr">quantity</span>: <span class="hljs-number">1</span>
      }
@@ -627,7 +668,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/sourceallies/payment-gateway-js/blob/311d329/packages/payment-gateway/src/transactions/common.ts#L56">transactions/common.ts:56</a></li>
+									<li>Defined in <a href="https://github.com/SourceAllies/payment-gateway-js/blob/cb564f9/packages/payment-gateway/src/transactions/common.ts#L58">transactions/common.ts:58</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -675,13 +716,13 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/sourceallies/payment-gateway-js/blob/311d329/packages/payment-gateway/src/transactions/common.ts#L28">transactions/common.ts:28</a></li>
+									<li>Defined in <a href="https://github.com/SourceAllies/payment-gateway-js/blob/cb564f9/packages/payment-gateway/src/transactions/common.ts#L30">transactions/common.ts:30</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Makes an HTTP request to get the merchant details from Payment Gateway. When
-										the response is recieved, <code>callbackFunction</code> is called with the
+										the response is received, <code>callbackFunction</code> is called with the
 										<code>XMLHttpRequest</code> object as the parameter. The body of the HTTP request can
 									then be parsed to JSON and used in <a href="globals.html#encryptpaymentdata">encryptPaymentData</a>.</p>
 								</div>
@@ -730,6 +771,119 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="isbankdatavalid" class="tsd-anchor"></a>
+					<h3>is<wbr>Bank<wbr>Data<wbr>Valid</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Bank<wbr>Data<wbr>Valid<span class="tsd-signature-symbol">(</span>bankData<span class="tsd-signature-symbol">: </span><a href="interfaces/bankdata.html" class="tsd-signature-type">BankData</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/SourceAllies/payment-gateway-js/blob/cb564f9/packages/payment-gateway/src/transactions/common.ts#L252">transactions/common.ts:252</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Checks if bank data could possibly be valid by doing basic validation of
+										the account number and routing number. This function uses the
+										<a href="https://en.wikipedia.org/wiki/Luhn_algorithm">Luhn Algorithm</a> to check the
+									account number and routing number.</p>
+								</div>
+								<blockquote>
+									<p>NOTE: this function <strong>does not</strong> check that the account is actually valid,
+									only that it <strong>could be</strong> valid.</p>
+								</blockquote>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>bankData: <a href="interfaces/bankdata.html" class="tsd-signature-type">BankData</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The card data to check.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+							<p>   True if the bank could be valid, false if not.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="iscarddatavalid" class="tsd-anchor"></a>
+					<h3>is<wbr>Card<wbr>Data<wbr>Valid</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Card<wbr>Data<wbr>Valid<span class="tsd-signature-symbol">(</span>cardData<span class="tsd-signature-symbol">: </span><a href="interfaces/carddata.html" class="tsd-signature-type">CardData</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/SourceAllies/payment-gateway-js/blob/cb564f9/packages/payment-gateway/src/transactions/common.ts#L205">transactions/common.ts:205</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Checks if a credit card could possibly be valid by doing basic validation of
+										the card number, CSC, and expiration date. This function uses the
+										<a href="https://en.wikipedia.org/wiki/Luhn_algorithm">Luhn Algorithm</a> to check the
+									card number.</p>
+								</div>
+								<blockquote>
+									<p>NOTE: this function <strong>does not</strong> check that the card is actually valid, only
+									that it <strong>could be</strong> valid.</p>
+								</blockquote>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>cardData: <a href="interfaces/carddata.html" class="tsd-signature-type">CardData</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The card data to check.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+							<p>   True if the card could be valid, false if not.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="passesluhnalgorithm" class="tsd-anchor"></a>
+					<h3>passes<wbr>Luhn<wbr>Algorithm</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">passes<wbr>Luhn<wbr>Algorithm<span class="tsd-signature-symbol">(</span>number<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/SourceAllies/payment-gateway-js/blob/cb564f9/packages/payment-gateway/src/transactions/common.ts#L165">transactions/common.ts:165</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Checks if a  number could possibly be valid by using the
+										<a href="https://en.wikipedia.org/wiki/Luhn_algorithm">Luhn Algorithm</a>. The number
+										string passed in must contain only number characters. If there is a
+									non-number character, there may be unexpected behaviors.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>number: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The number to check as a string.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+							<p>   True if the card number could be valid, false if not.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function">
 					<a name="processapplepaytransactionrequest" class="tsd-anchor"></a>
 					<h3>process<wbr>Apple<wbr>Pay<wbr>Transaction<wbr>Request</h3>
 					<ul class="tsd-signatures tsd-kind-function">
@@ -739,7 +893,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/sourceallies/payment-gateway-js/blob/311d329/packages/payment-gateway/src/transactions/singleTransaction.ts#L491">transactions/singleTransaction.ts:491</a></li>
+									<li>Defined in <a href="https://github.com/SourceAllies/payment-gateway-js/blob/cb564f9/packages/payment-gateway/src/transactions/singleTransaction.ts#L491">transactions/singleTransaction.ts:491</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -780,7 +934,7 @@
 								<li>
 									<h5>paymentData: <span class="tsd-signature-type">ApplePayPayment</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<pre><code> The argument passed <span class="hljs-keyword">into</span> Apple<span class="hljs-comment">&#x27;s `applePaySession.onpaymentauthorized`</span>
+										<pre><code> The argument passed <span class="hljs-keyword">into</span> Apple<span class="hljs-comment">'s `applePaySession.onpaymentauthorized`</span>
  <span class="hljs-keyword">function</span>.</code></pre>
 									</div>
 								</li>
@@ -844,7 +998,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/sourceallies/payment-gateway-js/blob/311d329/packages/payment-gateway/src/transactions/singleTransaction.ts#L646">transactions/singleTransaction.ts:646</a></li>
+									<li>Defined in <a href="https://github.com/SourceAllies/payment-gateway-js/blob/cb564f9/packages/payment-gateway/src/transactions/singleTransaction.ts#L646">transactions/singleTransaction.ts:646</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -939,7 +1093,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/sourceallies/payment-gateway-js/blob/311d329/packages/payment-gateway/src/transactions/singleTransaction.ts#L321">transactions/singleTransaction.ts:321</a></li>
+									<li>Defined in <a href="https://github.com/SourceAllies/payment-gateway-js/blob/cb564f9/packages/payment-gateway/src/transactions/singleTransaction.ts#L321">transactions/singleTransaction.ts:321</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -977,7 +1131,7 @@
 								<li>
 									<h5>paymentData: <span class="tsd-signature-type">PaymentData</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<pre><code> The <span class="hljs-built_in">object</span> returned <span class="hljs-keyword">from</span> Google<span class="hljs-comment">&#x27;s `paymentsClient.loadPaymentData()`.</span></code></pre>
+										<pre><code> The <span class="hljs-built_in">object</span> returned <span class="hljs-keyword">from</span> Google<span class="hljs-comment">'s `paymentsClient.loadPaymentData()`.</span></code></pre>
 									</div>
 								</li>
 								<li>
@@ -1041,7 +1195,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/sourceallies/payment-gateway-js/blob/311d329/packages/payment-gateway/src/transactions/recurringTransaction.ts#L22">transactions/recurringTransaction.ts:22</a></li>
+									<li>Defined in <a href="https://github.com/SourceAllies/payment-gateway-js/blob/cb564f9/packages/payment-gateway/src/transactions/recurringTransaction.ts#L22">transactions/recurringTransaction.ts:22</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1105,7 +1259,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/sourceallies/payment-gateway-js/blob/311d329/packages/payment-gateway/src/transactions/recurringTransaction.ts#L128">transactions/recurringTransaction.ts:128</a></li>
+									<li>Defined in <a href="https://github.com/SourceAllies/payment-gateway-js/blob/cb564f9/packages/payment-gateway/src/transactions/recurringTransaction.ts#L128">transactions/recurringTransaction.ts:128</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1188,7 +1342,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/sourceallies/payment-gateway-js/blob/311d329/packages/payment-gateway/src/transactions/singleTransaction.ts#L55">transactions/singleTransaction.ts:55</a></li>
+									<li>Defined in <a href="https://github.com/SourceAllies/payment-gateway-js/blob/cb564f9/packages/payment-gateway/src/transactions/singleTransaction.ts#L55">transactions/singleTransaction.ts:55</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1252,7 +1406,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/sourceallies/payment-gateway-js/blob/311d329/packages/payment-gateway/src/transactions/singleTransaction.ts#L152">transactions/singleTransaction.ts:152</a></li>
+									<li>Defined in <a href="https://github.com/SourceAllies/payment-gateway-js/blob/cb564f9/packages/payment-gateway/src/transactions/singleTransaction.ts#L152">transactions/singleTransaction.ts:152</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1329,12 +1483,12 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/sourceallies/payment-gateway-js/blob/311d329/packages/payment-gateway/src/transactions/singleTransaction.ts#L543">transactions/singleTransaction.ts:543</a></li>
+									<li>Defined in <a href="https://github.com/SourceAllies/payment-gateway-js/blob/cb564f9/packages/payment-gateway/src/transactions/singleTransaction.ts#L543">transactions/singleTransaction.ts:543</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Validates the <a href="interfaces/validationdata.html">ValidationData</a> that&#39;s generated via the
+									<p>Validates the <a href="interfaces/validationdata.html">ValidationData</a> that's generated via the
 										<a href="globals.html#buildapplepayvalidationrequestdata">buildApplePayValidationRequestData</a> function by making a HTTP request
 										to Payment Gateway. When the response is received, <code>callbackFunction</code> is
 										called with the <code>XMLHttpRequest</code> object as the parameter. This function
@@ -1476,8 +1630,17 @@
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/validationdata.html" class="tsd-kind-icon">Validation<wbr>Data</a>
 					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#accounttype" class="tsd-kind-icon">Account<wbr>Type</a>
+					</li>
 					<li class=" tsd-kind-variable">
 						<a href="globals.html#auth_capture_transaction" class="tsd-kind-icon">AUTH_<wbr>CAPTURE_<wbr>TRANSACTION</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#numbers_regex" class="tsd-kind-icon">NUMBERS_<wbr>REGEX</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#chance" class="tsd-kind-icon">chance</a>
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="globals.html#buildapplepaytransactionrequestdata" class="tsd-kind-icon">build<wbr>Apple<wbr>Pay<wbr>Transaction<wbr>Request<wbr>Data</a>
@@ -1502,6 +1665,15 @@
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="globals.html#getmerchantdetails" class="tsd-kind-icon">get<wbr>Merchant<wbr>Details</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#isbankdatavalid" class="tsd-kind-icon">is<wbr>Bank<wbr>Data<wbr>Valid</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#iscarddatavalid" class="tsd-kind-icon">is<wbr>Card<wbr>Data<wbr>Valid</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#passesluhnalgorithm" class="tsd-kind-icon">passes<wbr>Luhn<wbr>Algorithm</a>
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="globals.html#processapplepaytransactionrequest" class="tsd-kind-icon">process<wbr>Apple<wbr>Pay<wbr>Transaction<wbr>Request</a>
@@ -1543,9 +1715,9 @@
 	</div>
 </footer>
 <div class="container tsd-generator">
-	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a>, the 7/15/2020 at 2:26:22 PM</p>
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a>, the 7/23/2020 at 11:27:31 AM</p>
 </div>
 <div class="overlay"></div>
 <script src="assets/js/main.js"></script>
-</body>
-</html>
+<script>if (location.protocol == 'file:') document.write('<script src="assets/js/search.js"><' + '/script>');</script>
+</body></html>

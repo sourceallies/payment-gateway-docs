@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<!--
+  This file is used when generating the developer documentation for the form
+  web component. The generated documentation is in the docs folder in the root
+  of this repository. Please to not commit the docs folder to your branch.
+-->
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>@sourceallies/payment-gateway-form - 0.1.0</title>
+  <meta name="description" content="Documentation for @sourceallies/payment-gateway - REPLACE_VERSION">
+  <link rel="icon" href="../../../favicon.png"></head>
+  <style>
+    html {
+      box-sizing: border-box;
+    }
+
+    *,
+    *:before,
+    *:after {
+      box-sizing: inherit;
+    }
+
+    body {
+      font-family: "Arial", "Helvetica", "sans-serif";
+      margin: 0;
+      color: #333;
+      margin: 0;
+      font-size: 1rem;
+      padding: 1rem;
+      background: #f7f7f7;
+    }
+
+    #documentation-wrapper {
+      margin: 2rem auto;
+      width: 100%;
+      max-width: 70rem;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 0.5rem;
+    }
+
+    h1 {
+      margin-top: 0;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    table td,
+    table th {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+
+    table tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    table tr:hover {
+      background-color: #ddd;
+    }
+
+    table th {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      text-align: left;
+      background-color: #1A80C7;
+      color: white;
+    }
+
+    table td {
+      min-width: 10rem;
+    }
+
+    code {
+      font-family: "SFMono-Regular", "Consolas", "Liberation Mono", "Menlo", "monospace";
+      font-size: 85%;
+      padding: .2rem .4rem;
+      background-color: #F6F8FA;
+      border-radius: 0.25rem;
+    }
+
+    h3 {
+      font-size: 1.5em;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="documentation-wrapper">
+    <h1>@sourceallies/payment-gateway-form - REPLACE_VERSION</h1>
+    <h2>Web Components</h2>
+    <div class="element-wrapper">
+    <h3>sa-pg-form</h3>
+    <div class="table-wrapper">
+      <table>
+        <tr>
+          <th>Attribute</th>
+          <th>Description</th>
+          <th>Default Value</th>
+          <th>Required</th>
+        </tr>
+        <tr>
+    <td>amount-options</td>
+    <td>Specifies what values to display in default buttons.
+If empty, buttons will not render. Separate values with pipes.
+Example: '10|25|50|100|250'</td>
+    <td></td>
+    <td><code>false</code></td>
+  </tr><tr>
+    <td>api-login-id</td>
+    <td>Your login for Authorize.Net.</td>
+    <td></td>
+    <td><code>true</code></td>
+  </tr><tr>
+    <td>credit-card</td>
+    <td>Specifies whether whether credit card transactions are allowed.</td>
+    <td></td>
+    <td><code>false</code></td>
+  </tr><tr>
+    <td>display-cover-fees</td>
+    <td>Specifies whether you want to display the 'cover fees' checkbox and information.</td>
+    <td></td>
+    <td><code>false</code></td>
+  </tr><tr>
+    <td>e-check</td>
+    <td>Specifies whether eCheck transactions are allowed.</td>
+    <td></td>
+    <td><code>false</code></td>
+  </tr><tr>
+    <td>environment</td>
+    <td>The environment of Payment Gateway you want to make HTTP requests to.</td>
+    <td></td>
+    <td><code>false</code></td>
+  </tr><tr>
+    <td>flat-fee</td>
+    <td>Sets percentage processing fee amount.</td>
+    <td><code>0.35</code></td>
+    <td><code>false</code></td>
+  </tr><tr>
+    <td>gateway-name</td>
+    <td>Your Payment Gateway gateway name.</td>
+    <td></td>
+    <td><code>true</code></td>
+  </tr><tr>
+    <td>get-invoice-number</td>
+    <td>Specifies whether you want to display the invoice number field. If this is
+not displayed, a random, unique invoice number will be generated for each
+transaction.</td>
+    <td></td>
+    <td><code>false</code></td>
+  </tr><tr>
+    <td>handle-result</td>
+    <td>Specifies whether the form should handle the result of the transaction.</td>
+    <td></td>
+    <td><code>false</code></td>
+  </tr><tr>
+    <td>keyword</td>
+    <td>Specifies the keyword to use for titling the sections of the form.
+Examples: payment, gift, donation, or contribution.</td>
+    <td><code>'payment'</code></td>
+    <td><code>false</code></td>
+  </tr><tr>
+    <td>line-items</td>
+    <td>The lines items options. These values are used for the name of the line
+item. If the line item is longer than 31 characters, it will be truncated
+prior to sending it to Payment Gateway. Separate line items with pipes.
+Example: 'Item one|Item two|Item three'</td>
+    <td></td>
+    <td><code>false</code></td>
+  </tr><tr>
+    <td>one-time</td>
+    <td>Specifies whether one time payments are allowed.</td>
+    <td></td>
+    <td><code>false</code></td>
+  </tr><tr>
+    <td>other-designation</td>
+    <td>Stores whether to display the other designation input.</td>
+    <td><code>false</code></td>
+    <td><code>false</code></td>
+  </tr><tr>
+    <td>partner-name</td>
+    <td>Your Payment Gateway partner name.</td>
+    <td></td>
+    <td><code>true</code></td>
+  </tr><tr>
+    <td>percent-fee</td>
+    <td>Sets percentage processing fee amount.</td>
+    <td><code>0.03</code></td>
+    <td><code>false</code></td>
+  </tr><tr>
+    <td>recurring</td>
+    <td>Specifies whether recurring payments are allowed.</td>
+    <td></td>
+    <td><code>false</code></td>
+  </tr>
+      </table>
+    </div>
+  </div>
+  </div>
+</body>
+
+</html>

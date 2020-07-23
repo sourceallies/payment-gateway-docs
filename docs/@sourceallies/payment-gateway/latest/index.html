@@ -1,14 +1,11 @@
-<!doctype html>
-<html class="default no-js">
-<head>
+<!DOCTYPE html><html class="default no-js"><head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>@sourceallies/payment-gateway - v0.3.5</title>
-	<meta name="description" content="Documentation for @sourceallies/payment-gateway - v0.3.5">
+	<title>@sourceallies/payment-gateway - v0.4.0</title>
+	<meta name="description" content="Documentation for @sourceallies/payment-gateway - v0.4.0">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="assets/css/main.css">
-	<link rel="icon" href="favicon.png" />
-</head>
+<link rel="icon" href="favicon.png"></head>
 <body>
 <header>
 	<div class="tsd-page-toolbar">
@@ -17,13 +14,13 @@
 				<div class="table-cell" id="tsd-search" data-index="assets/js/search.json" data-base=".">
 					<div class="field">
 						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
-						<input id="tsd-search-field" type="text" />
+						<input id="tsd-search-field" type="text">
 					</div>
 					<ul class="results">
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="index.html" class="title">@sourceallies/payment-gateway - v0.3.5</a>
+					<a href="index.html" class="title">@sourceallies/payment-gateway - v0.4.0</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -37,9 +34,9 @@
 									<li data-value="private" class="selected">All</li>
 								</ul>
 							</div>
-							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<input type="checkbox" id="tsd-filter-inherited" checked="">
 							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
-							<input type="checkbox" id="tsd-filter-only-exported" />
+							<input type="checkbox" id="tsd-filter-only-exported">
 							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
 						</div>
 					</div>
@@ -55,7 +52,7 @@
 					<a href="globals.html">Globals</a>
 				</li>
 			</ul>
-			<h1>@sourceallies/payment-gateway - v0.3.5</h1>
+			<h1>@sourceallies/payment-gateway - v0.4.0</h1>
 		</div>
 	</div>
 </header>
@@ -84,7 +81,7 @@
 					<h1>Introduction</h1>
 				</a>
 				<p><a href="https://badge.fury.io/js/%40sourceallies%2Fpayment-gateway"><img src="https://badge.fury.io/js/%40sourceallies%2Fpayment-gateway.svg" alt="npm version"></a></p>
-				<p>NPM package used to interface your website with <a href="https://www.sourceallies.com/payment-gateway">Source Allies Payment Gateway</a>. The developer documentation for this package <a href="https://sourceallies.github.io/payment-gateway-js/index.html">can be found here</a>. A tutorial of how to integrate Payment Gateway with your website <a href="https://www.sourceallies.com/payment-gateway/developer">can be found here</a>.</p>
+				<p>NPM package used to interface your website with <a href="https://www.sourceallies.com/payment-gateway">Source Allies Payment Gateway</a>. The developer documentation for this package <a href="https://sourceallies.github.io/payment-gateway-docs/@sourceallies/payment-gateway/latest/index.html">can be found here</a>. A tutorial of how to integrate Payment Gateway with your website <a href="https://www.sourceallies.com/payment-gateway/developer">can be found here</a>.</p>
 				<a href="#getting-started" id="getting-started" style="color: inherit; text-decoration: none;">
 					<h1>Getting Started</h1>
 				</a>
@@ -96,7 +93,7 @@
 						<pre><code class="language-html"> <span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
      <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
          <span class="hljs-tag">&lt;<span class="hljs-name">script</span>
-             <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://unpkg.com/@sourceallies/payment-gateway@latest/dist/payment-gateway.umd.js&quot;</span>
+             <span class="hljs-attr">src</span>=<span class="hljs-string">"https://unpkg.com/@sourceallies/payment-gateway@latest/dist/payment-gateway.umd.js"</span>
          &gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
      <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
  <span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span></code></pre>
@@ -108,7 +105,7 @@
 						<pre><code class="language-html"> <span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
      <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
          <span class="hljs-tag">&lt;<span class="hljs-name">script</span>
-             <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://unpkg.com/@sourceallies/payment-gateway@latest/dist/payment-gateway.umd.js&quot;</span>
+             <span class="hljs-attr">src</span>=<span class="hljs-string">"https://unpkg.com/@sourceallies/payment-gateway@latest/dist/payment-gateway.umd.js"</span>
          &gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
          <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
              <span class="hljs-keyword">const</span> encryptedPaymentData = paymentGateway.encryptPaymentData(
@@ -128,10 +125,10 @@
 					<li><p>Run <code>npm install @sourceallies/payment-gateway</code> to install. You can use any package manager you prefer.</p>
 					</li>
 					<li><p>Import the package using the following statement:</p>
-						<pre><code class="language-javascript">     <span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> paymentGateway <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@sourceallies/payment-gateway&#x27;</span>;</code></pre>
+						<pre><code class="language-javascript">     <span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> paymentGateway <span class="hljs-keyword">from</span> <span class="hljs-string">'@sourceallies/payment-gateway'</span>;</code></pre>
 					</li>
 					<li><p>Start calling functions in the package. Here is an example of usage:</p>
-						<pre><code class="language-javascript">     <span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> paymentGateway <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@sourceallies/payment-gateway&#x27;</span>;
+						<pre><code class="language-javascript">     <span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> paymentGateway <span class="hljs-keyword">from</span> <span class="hljs-string">'@sourceallies/payment-gateway'</span>;
 
      <span class="hljs-keyword">const</span> encryptedPaymentData = paymentGateway.encryptPaymentData(
          response,
@@ -150,53 +147,53 @@
 				<a href="#single-transaction" id="single-transaction" style="color: inherit; text-decoration: none;">
 					<h2>Single Transaction</h2>
 				</a>
-				<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">action</span>=<span class="hljs-string">&quot;javascript:handleSubmit()&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;invoice_number&quot;</span>&gt;</span>Invoice Number<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;invoice_number&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;1&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;amount&quot;</span>&gt;</span>Amount<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;amount&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;1.00&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;email_address&quot;</span>&gt;</span>Email<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;email&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;email_address&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;email@email.com&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;cardholder-name&quot;</span>&gt;</span>Cardholder Name<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;cardholder-name&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;FirstName LastName&quot;</span>&gt;</span> 
-    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;card-number&quot;</span>&gt;</span>Card Number<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;card-number&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">maxlength</span>=<span class="hljs-string">&quot;16&quot;</span> <span class="hljs-attr">minlength</span>=<span class="hljs-string">&quot;16&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;4111111111111111&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;card-expiration&quot;</span>&gt;</span>Card Expiration (eg: 01/21)<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;card-expiration&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">maxlength</span>=<span class="hljs-string">&quot;5&quot;</span> <span class="hljs-attr">minlength</span>=<span class="hljs-string">&quot;4&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;01/23&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;card-code&quot;</span>&gt;</span>Card Code<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;card-code&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">maxlength</span>=<span class="hljs-string">&quot;4&quot;</span> <span class="hljs-attr">minlength</span>=<span class="hljs-string">&quot;3&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;123&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;street-address&quot;</span>&gt;</span>Street Address<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;street-address&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;104 First Street&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;city&quot;</span>&gt;</span>City<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;city&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;Urbandale&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;state&quot;</span>&gt;</span>State<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;state&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;IA&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;zipcode&quot;</span>&gt;</span>Zip Code<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;zipcode&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">minlength</span>=<span class="hljs-string">&quot;5&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;12345&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;submit&quot;</span>&gt;</span>Submit<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+				<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">action</span>=<span class="hljs-string">"javascript:handleSubmit()"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"invoice_number"</span>&gt;</span>Invoice Number<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"invoice_number"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"1"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"amount"</span>&gt;</span>Amount<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"amount"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"1.00"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"email_address"</span>&gt;</span>Email<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"email"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"email_address"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"email@email.com"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"cardholder-name"</span>&gt;</span>Cardholder Name<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"cardholder-name"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"FirstName LastName"</span>&gt;</span> 
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"card-number"</span>&gt;</span>Card Number<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"card-number"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">maxlength</span>=<span class="hljs-string">"16"</span> <span class="hljs-attr">minlength</span>=<span class="hljs-string">"16"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"4111111111111111"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"card-expiration"</span>&gt;</span>Card Expiration (eg: 01/21)<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"card-expiration"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">maxlength</span>=<span class="hljs-string">"5"</span> <span class="hljs-attr">minlength</span>=<span class="hljs-string">"4"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"01/23"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"card-code"</span>&gt;</span>Card Code<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"card-code"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">maxlength</span>=<span class="hljs-string">"4"</span> <span class="hljs-attr">minlength</span>=<span class="hljs-string">"3"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"123"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"street-address"</span>&gt;</span>Street Address<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"street-address"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"104 First Street"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"city"</span>&gt;</span>City<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"city"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Urbandale"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"state"</span>&gt;</span>State<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"state"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"IA"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"zipcode"</span>&gt;</span>Zip Code<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"zipcode"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">minlength</span>=<span class="hljs-string">"5"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"12345"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span>&gt;</span>Submit<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">script</span>
-    <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://jstest.authorize.net/v1/Accept.js&quot;</span>&gt;</span>
+    <span class="hljs-attr">src</span>=<span class="hljs-string">"https://jstest.authorize.net/v1/Accept.js"</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">script</span>
-    <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://unpkg.com/@sourceallies/payment-gateway@latest/dist/payment-gateway.umd.js&quot;</span>&gt;</span>
+    <span class="hljs-attr">src</span>=<span class="hljs-string">"https://unpkg.com/@sourceallies/payment-gateway@latest/dist/payment-gateway.umd.js"</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
 
     <span class="hljs-comment">// Your information to link the payments to your Payment Gateway account.</span>
     <span class="hljs-keyword">const</span> gatewayData = {
-        <span class="hljs-attr">partnerName</span>: <span class="hljs-string">&quot;YOUR PARTNER NAME&quot;</span>,
-        <span class="hljs-attr">gatewayName</span>: <span class="hljs-string">&quot;YOUR GATEWAY NAME&quot;</span>
+        <span class="hljs-attr">partnerName</span>: <span class="hljs-string">"YOUR PARTNER NAME"</span>,
+        <span class="hljs-attr">gatewayName</span>: <span class="hljs-string">"YOUR GATEWAY NAME"</span>
     };
 
     <span class="hljs-comment">// Specifies the environment to be used when Payment Gateway makes requests.</span>
-    <span class="hljs-comment">// This can be set to &quot;DEV&quot; or &quot;PROD&quot;.</span>
-    <span class="hljs-keyword">const</span> environment = <span class="hljs-string">&quot;DEV&quot;</span>;
+    <span class="hljs-comment">// This can be set to "DEV" or "PROD".</span>
+    <span class="hljs-keyword">const</span> environment = <span class="hljs-string">"DEV"</span>;
 
-    <span class="hljs-comment">// Your key to access Authorize.Net&#x27;s API.</span>
-    <span class="hljs-keyword">const</span> authorizeNetAPIKey = <span class="hljs-string">&quot;YOUR AUTHORIZE.NET API KEY&quot;</span>;
+    <span class="hljs-comment">// Your key to access Authorize.Net's API.</span>
+    <span class="hljs-keyword">const</span> authorizeNetAPIKey = <span class="hljs-string">"YOUR AUTHORIZE.NET API KEY"</span>;
 
     <span class="hljs-comment">/**
      * Handles the result from submitting the transaction with Payment Gateway.
@@ -205,14 +202,14 @@
         <span class="hljs-keyword">if</span> (xmlHttpRequest &amp;&amp; xmlHttpRequest.status === <span class="hljs-number">200</span>) {
             <span class="hljs-keyword">const</span> responseBody = <span class="hljs-built_in">JSON</span>.parse(xmlHttp.response);
 
-            <span class="hljs-comment">// Replace this with custom response handling that checks for an &quot;OK&quot;</span>
+            <span class="hljs-comment">// Replace this with custom response handling that checks for an "OK"</span>
             <span class="hljs-comment">// responseCode.</span>
             <span class="hljs-built_in">console</span>.log(responseBody); 
         } <span class="hljs-keyword">else</span> {
             <span class="hljs-comment">// You would end up in this error block if the response from Payment</span>
-            <span class="hljs-comment">// Gateway does not have a status of &quot;200&quot;. You will want to handle </span>
+            <span class="hljs-comment">// Gateway does not have a status of "200". You will want to handle </span>
             <span class="hljs-comment">// this case with custom error handling for your website.</span>
-            <span class="hljs-built_in">console</span>.error(<span class="hljs-string">&quot;Error when processing the transaction.&quot;</span>);
+            <span class="hljs-built_in">console</span>.error(<span class="hljs-string">"Error when processing the transaction."</span>);
         }
     }
 
@@ -220,33 +217,33 @@
      * Submits the transaction request to Payment Gateway.
      */</span>
     <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">submitTransactionRequest</span>(<span class="hljs-params">response</span>) </span>{
-        <span class="hljs-keyword">if</span> (response.messages.resultCode === <span class="hljs-string">&quot;Error&quot;</span>) {
+        <span class="hljs-keyword">if</span> (response.messages.resultCode === <span class="hljs-string">"Error"</span>) {
             <span class="hljs-built_in">console</span>.error(response.messages.message);
             <span class="hljs-keyword">return</span>;
         }
 
-        <span class="hljs-keyword">const</span> amount = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&quot;amount&quot;</span>).value
+        <span class="hljs-keyword">const</span> amount = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"amount"</span>).value
 
         <span class="hljs-keyword">const</span> billTo = {
-            <span class="hljs-attr">firstName</span>: <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&quot;first_name&quot;</span>).value,
-            <span class="hljs-attr">lastName</span>: <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&quot;last_name&quot;</span>).value,
-            <span class="hljs-attr">address</span>: <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&quot;address&quot;</span>).value,
-            <span class="hljs-attr">city</span>: <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&quot;city&quot;</span>).value,
-            <span class="hljs-attr">state</span>: <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&quot;state&quot;</span>).value,
-            <span class="hljs-attr">zip</span>: <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&quot;zip_code&quot;</span>).value,
-            <span class="hljs-attr">country</span>: <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&quot;country&quot;</span>).value
+            <span class="hljs-attr">firstName</span>: <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"first_name"</span>).value,
+            <span class="hljs-attr">lastName</span>: <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"last_name"</span>).value,
+            <span class="hljs-attr">address</span>: <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"address"</span>).value,
+            <span class="hljs-attr">city</span>: <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"city"</span>).value,
+            <span class="hljs-attr">state</span>: <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"state"</span>).value,
+            <span class="hljs-attr">zip</span>: <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"zip_code"</span>).value,
+            <span class="hljs-attr">country</span>: <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"country"</span>).value
         };
 
         <span class="hljs-keyword">const</span> customer = {
-            <span class="hljs-attr">email</span>: <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&quot;email&quot;</span>).value
+            <span class="hljs-attr">email</span>: <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"email"</span>).value
         };
 
         <span class="hljs-keyword">const</span> order = {
-            <span class="hljs-attr">description</span>: <span class="hljs-string">&quot;Description&quot;</span>,
+            <span class="hljs-attr">description</span>: <span class="hljs-string">"Description"</span>,
 
             <span class="hljs-comment">// This is not required. If you would like to include it, you can</span>
             <span class="hljs-comment">// randomly generate it.</span>
-            <span class="hljs-attr">invoiceNumber</span>: <span class="hljs-string">&quot;SOME INVOICE NUMBER&quot;</span>
+            <span class="hljs-attr">invoiceNumber</span>: <span class="hljs-string">"SOME INVOICE NUMBER"</span>
         };
 
         <span class="hljs-keyword">const</span> requestData = paymentGateway.buildRequestData(
@@ -274,9 +271,9 @@
         <span class="hljs-keyword">if</span> (xmlHttpRequest &amp;&amp; xmlHttpRequest.status &amp;&amp; xmlHttpRequest.status === <span class="hljs-number">200</span>) {
             <span class="hljs-keyword">const</span> responseBody = <span class="hljs-built_in">JSON</span>.parse(xmlHttpRequest.response);
 
-            <span class="hljs-keyword">if</span> (responseBody.messages.resultCode !== <span class="hljs-string">&quot;OK&quot;</span>) {
+            <span class="hljs-keyword">if</span> (responseBody.messages.resultCode !== <span class="hljs-string">"OK"</span>) {
                 <span class="hljs-comment">// Replace this with custom error handling for your website.</span>
-                <span class="hljs-built_in">console</span>.error(<span class="hljs-string">&quot;Bad response.&quot;</span>);
+                <span class="hljs-built_in">console</span>.error(<span class="hljs-string">"Bad response."</span>);
                 <span class="hljs-comment">// This breaks out of the current function so the code below is not ran.</span>
                 <span class="hljs-keyword">return</span>;
             }
@@ -284,11 +281,11 @@
             <span class="hljs-comment">// This can be either cardData or bankData. This paymentData object</span>
             <span class="hljs-comment">// is the cardData type.</span>
             <span class="hljs-keyword">const</span> paymentData = {
-                <span class="hljs-attr">cardNumber</span>: <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&quot;card-number&quot;</span>).value,
-                <span class="hljs-attr">cardExpiration</span>: <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&quot;card-expiration&quot;</span>).value,
-                <span class="hljs-attr">cardCode</span>: <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&quot;card-code&quot;</span>).value,
-                <span class="hljs-attr">fullName</span>: <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&quot;cardholder-name&quot;</span>).value,
-                <span class="hljs-attr">zip</span>: <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&quot;zipcode&quot;</span>).value
+                <span class="hljs-attr">cardNumber</span>: <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"card-number"</span>).value,
+                <span class="hljs-attr">cardExpiration</span>: <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"card-expiration"</span>).value,
+                <span class="hljs-attr">cardCode</span>: <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"card-code"</span>).value,
+                <span class="hljs-attr">fullName</span>: <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"cardholder-name"</span>).value,
+                <span class="hljs-attr">zip</span>: <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"zipcode"</span>).value
             };
 
             <span class="hljs-comment">// Encrypts the payment data so it is secure when sending it to Payment Gateway. </span>
@@ -301,9 +298,9 @@
             Accept.dispatchData(secureData, submitTransactionRequest);
         } <span class="hljs-keyword">else</span> {
             <span class="hljs-comment">// You would end up in this error block if the response from Payment</span>
-            <span class="hljs-comment">// Gateway does not have a status of &quot;200&quot;. You will want to handle</span>
+            <span class="hljs-comment">// Gateway does not have a status of "200". You will want to handle</span>
             <span class="hljs-comment">// this case with custom error handling for your website.</span>
-            <span class="hljs-built_in">console</span>.error(<span class="hljs-string">&quot;Bad response.&quot;</span>); 
+            <span class="hljs-built_in">console</span>.error(<span class="hljs-string">"Bad response."</span>); 
         }
     }
 
@@ -318,66 +315,66 @@
 				<a href="#recurring-transacion-subscription" id="recurring-transacion-subscription" style="color: inherit; text-decoration: none;">
 					<h2>Recurring Transacion (Subscription)</h2>
 				</a>
-				<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">action</span>=<span class="hljs-string">&quot;javascript:handleSubmit()&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;invoice_number&quot;</span>&gt;</span>Invoice Number<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;invoice_number&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;1&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;amount&quot;</span>&gt;</span>Amount<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;amount&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;1.00&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;email_address&quot;</span>&gt;</span>Email<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;email&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;email_address&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;email@email.com&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;cardholder-name&quot;</span>&gt;</span>Cardholder Name<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;cardholder-name&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;FirstName LastName&quot;</span>&gt;</span> 
-    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;card-number&quot;</span>&gt;</span>Card Number<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;card-number&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">maxlength</span>=<span class="hljs-string">&quot;16&quot;</span> <span class="hljs-attr">minlength</span>=<span class="hljs-string">&quot;16&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;4111111111111111&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;card-expiration&quot;</span>&gt;</span>Card Expiration (eg: 01/21)<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;card-expiration&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">maxlength</span>=<span class="hljs-string">&quot;5&quot;</span> <span class="hljs-attr">minlength</span>=<span class="hljs-string">&quot;4&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;01/23&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;card-code&quot;</span>&gt;</span>Card Code<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;card-code&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">maxlength</span>=<span class="hljs-string">&quot;4&quot;</span> <span class="hljs-attr">minlength</span>=<span class="hljs-string">&quot;3&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;123&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;street-address&quot;</span>&gt;</span>Street Address<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;street-address&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;104 First Street&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;city&quot;</span>&gt;</span>City<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;city&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;Urbandale&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;state&quot;</span>&gt;</span>State<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;state&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;IA&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;zipcode&quot;</span>&gt;</span>Zip Code<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;zipcode&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">minlength</span>=<span class="hljs-string">&quot;5&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;12345&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;frequency_label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;frequency&quot;</span>&gt;</span>Frequency<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;frequency&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;1&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;1&quot;</span>&gt;</span>Monthly<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;3&quot;</span>&gt;</span>Quarterly<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;6&quot;</span>&gt;</span>Every Six Months<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;12&quot;</span>&gt;</span>Annually<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+				<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">action</span>=<span class="hljs-string">"javascript:handleSubmit()"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"invoice_number"</span>&gt;</span>Invoice Number<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"invoice_number"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"1"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"amount"</span>&gt;</span>Amount<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"amount"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"1.00"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"email_address"</span>&gt;</span>Email<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"email"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"email_address"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"email@email.com"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"cardholder-name"</span>&gt;</span>Cardholder Name<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"cardholder-name"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"FirstName LastName"</span>&gt;</span> 
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"card-number"</span>&gt;</span>Card Number<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"card-number"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">maxlength</span>=<span class="hljs-string">"16"</span> <span class="hljs-attr">minlength</span>=<span class="hljs-string">"16"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"4111111111111111"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"card-expiration"</span>&gt;</span>Card Expiration (eg: 01/21)<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"card-expiration"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">maxlength</span>=<span class="hljs-string">"5"</span> <span class="hljs-attr">minlength</span>=<span class="hljs-string">"4"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"01/23"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"card-code"</span>&gt;</span>Card Code<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"card-code"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">maxlength</span>=<span class="hljs-string">"4"</span> <span class="hljs-attr">minlength</span>=<span class="hljs-string">"3"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"123"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"street-address"</span>&gt;</span>Street Address<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"street-address"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"104 First Street"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"city"</span>&gt;</span>City<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"city"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Urbandale"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"state"</span>&gt;</span>State<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"state"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"IA"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"zipcode"</span>&gt;</span>Zip Code<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"zipcode"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">minlength</span>=<span class="hljs-string">"5"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"12345"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"frequency_label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"frequency"</span>&gt;</span>Frequency<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"frequency"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"1"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"1"</span>&gt;</span>Monthly<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"3"</span>&gt;</span>Quarterly<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"6"</span>&gt;</span>Every Six Months<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"12"</span>&gt;</span>Annually<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;payment_number_label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;payment_number&quot;</span>&gt;</span>Number of Payments<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;payment_number&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;1&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;first_payment_date_label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;first_payment_date&quot;</span>&gt;</span>Start Date (mm/dd/yyyy)<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"payment_number_label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"payment_number"</span>&gt;</span>Number of Payments<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"payment_number"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"1"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"first_payment_date_label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"first_payment_date"</span>&gt;</span>Start Date (mm/dd/yyyy)<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
     <span class="hljs-comment">&lt;!-- Please note that an input of type date has a date picker in Chrome and Firefox, not in Safari or IE --&gt;</span>
     <span class="hljs-comment">&lt;!-- Also, Chrome and Firefox will store the value as yyyy-mm-dd, where as Safari and IE will store the value as typed by the user --&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;date&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;first_payment_date&quot;</span> <span class="hljs-attr">title</span>=<span class="hljs-string">&quot;Pick a date for payments to start.&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;mm/dd/yyyy&quot;</span> <span class="hljs-attr">pattern</span>=<span class="hljs-string">&quot;^(((0?[1-9]|1[012])\/(0?[1-9]|1\d|2[0-8])|(0?[13456789]|1[012])\/(29|30)|(0?[13578]|1[02])\/31)\/(19|[2-9]\d)\d{2}|0?2\/29\/((19|[2-9]\d)(0[48]|[2468][048]|[13579][26])|(([2468][048]|[3579][26])00)))$&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;s&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;06/04/2020&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;submit&quot;</span>&gt;</span>Submit<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"date"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"first_payment_date"</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Pick a date for payments to start."</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"mm/dd/yyyy"</span> <span class="hljs-attr">pattern</span>=<span class="hljs-string">"^(((0?[1-9]|1[012])\/(0?[1-9]|1\d|2[0-8])|(0?[13456789]|1[012])\/(29|30)|(0?[13578]|1[02])\/31)\/(19|[2-9]\d)\d{2}|0?2\/29\/((19|[2-9]\d)(0[48]|[2468][048]|[13579][26])|(([2468][048]|[3579][26])00)))$"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"s"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"06/04/2020"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span>&gt;</span>Submit<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">script</span>
-    <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://jstest.authorize.net/v1/Accept.js&quot;</span>&gt;</span>
+    <span class="hljs-attr">src</span>=<span class="hljs-string">"https://jstest.authorize.net/v1/Accept.js"</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">script</span>
-    <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://unpkg.com/@sourceallies/payment-gateway@latest/dist/payment-gateway.umd.js&quot;</span>&gt;</span>
+    <span class="hljs-attr">src</span>=<span class="hljs-string">"https://unpkg.com/@sourceallies/payment-gateway@latest/dist/payment-gateway.umd.js"</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
 
     <span class="hljs-comment">// Your information to link the payments to your Payment Gateway account.</span>
     <span class="hljs-keyword">const</span> gatewayData = {
-        <span class="hljs-attr">partnerName</span>: <span class="hljs-string">&quot;YOUR PARTNER NAME&quot;</span>,
-        <span class="hljs-attr">gatewayName</span>: <span class="hljs-string">&quot;YOUR GATEWAY NAME&quot;</span>
+        <span class="hljs-attr">partnerName</span>: <span class="hljs-string">"YOUR PARTNER NAME"</span>,
+        <span class="hljs-attr">gatewayName</span>: <span class="hljs-string">"YOUR GATEWAY NAME"</span>
     };
 
     <span class="hljs-comment">// Specifies the environment to be used when Payment Gateway makes requests.</span>
-    <span class="hljs-comment">// This can be set to &quot;DEV&quot; or &quot;PROD&quot;.</span>
-    <span class="hljs-keyword">const</span> environment = <span class="hljs-string">&quot;DEV&quot;</span>;
+    <span class="hljs-comment">// This can be set to "DEV" or "PROD".</span>
+    <span class="hljs-keyword">const</span> environment = <span class="hljs-string">"DEV"</span>;
 
-    <span class="hljs-comment">// Your key to access Authorize.Net&#x27;s API.</span>
-    <span class="hljs-keyword">const</span> authorizeNetAPIKey = <span class="hljs-string">&quot;YOUR AUTHORIZE.NET API KEY&quot;</span>;
+    <span class="hljs-comment">// Your key to access Authorize.Net's API.</span>
+    <span class="hljs-keyword">const</span> authorizeNetAPIKey = <span class="hljs-string">"YOUR AUTHORIZE.NET API KEY"</span>;
 
     <span class="hljs-comment">/**
      * Handles the result from submitting the subscription with Payment Gateway.
@@ -385,14 +382,14 @@
     <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">handlePaymentGatewayProcessSubscriptionResponse</span>(<span class="hljs-params">xmlHttpRequest</span>) </span>{
         <span class="hljs-keyword">if</span> (xmlHttpRequest &amp;&amp; xmlHttpRequest.status &amp;&amp; xmlHttpRequest.status === <span class="hljs-number">200</span>) {
             <span class="hljs-keyword">const</span> responseBody = <span class="hljs-built_in">JSON</span>.parse(xmlHttp.response);
-            <span class="hljs-comment">// Replace this with custom response handling that checks for an &quot;OK&quot;</span>
+            <span class="hljs-comment">// Replace this with custom response handling that checks for an "OK"</span>
             <span class="hljs-comment">// responseCode. </span>
             <span class="hljs-built_in">console</span>.log(responseBody);
         } <span class="hljs-keyword">else</span> {
             <span class="hljs-comment">// You would end up in this error block if the response from Payment</span>
-            <span class="hljs-comment">// Gateway does not have a status of &quot;200&quot;. You will want to handle</span>
+            <span class="hljs-comment">// Gateway does not have a status of "200". You will want to handle</span>
             <span class="hljs-comment">// this case with custom error handling for your website.</span>
-            <span class="hljs-built_in">console</span>.error(<span class="hljs-string">&quot;Error when processing the subscription.&quot;</span>);
+            <span class="hljs-built_in">console</span>.error(<span class="hljs-string">"Error when processing the subscription."</span>);
         }
     }
 
@@ -400,41 +397,41 @@
      * Submits the subscription request to Payment Gateway.
      */</span>
     <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">submitSubscriptionRequest</span>(<span class="hljs-params">response</span>) </span>{
-        <span class="hljs-keyword">if</span> (response.messages.resultCode === <span class="hljs-string">&quot;Error&quot;</span>) {
+        <span class="hljs-keyword">if</span> (response.messages.resultCode === <span class="hljs-string">"Error"</span>) {
             <span class="hljs-built_in">console</span>.error(response.messages.message);
             <span class="hljs-keyword">return</span>;
         }
 
-        <span class="hljs-keyword">const</span> amount = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&quot;amount&quot;</span>).value;
+        <span class="hljs-keyword">const</span> amount = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"amount"</span>).value;
 
         <span class="hljs-keyword">const</span> billTo = {
-            <span class="hljs-attr">firstName</span>: <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&quot;first_name&quot;</span>).value,
-            <span class="hljs-attr">lastName</span>: <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&quot;last_name&quot;</span>).value,
-            <span class="hljs-attr">address</span>: <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&quot;address&quot;</span>).value,
-            <span class="hljs-attr">city</span>: <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&quot;city&quot;</span>).value,
-            <span class="hljs-attr">state</span>: <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&quot;state&quot;</span>).value,
-            <span class="hljs-attr">zip</span>: <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&quot;zip_code&quot;</span>).value,
-            <span class="hljs-attr">country</span>: <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&quot;country&quot;</span>).value
+            <span class="hljs-attr">firstName</span>: <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"first_name"</span>).value,
+            <span class="hljs-attr">lastName</span>: <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"last_name"</span>).value,
+            <span class="hljs-attr">address</span>: <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"address"</span>).value,
+            <span class="hljs-attr">city</span>: <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"city"</span>).value,
+            <span class="hljs-attr">state</span>: <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"state"</span>).value,
+            <span class="hljs-attr">zip</span>: <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"zip_code"</span>).value,
+            <span class="hljs-attr">country</span>: <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"country"</span>).value
         };
 
         <span class="hljs-keyword">const</span> customer = {
-            <span class="hljs-attr">email</span>: <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&quot;email&quot;</span>).value
+            <span class="hljs-attr">email</span>: <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"email"</span>).value
         };
 
         <span class="hljs-keyword">const</span> order = {
-            <span class="hljs-attr">description</span>: <span class="hljs-string">&quot;Description&quot;</span>,
+            <span class="hljs-attr">description</span>: <span class="hljs-string">"Description"</span>,
             <span class="hljs-comment">// This is not required. If you would like to include it, you can</span>
             <span class="hljs-comment">// randomly generate it.</span>
-            <span class="hljs-attr">invoiceNumber</span>: <span class="hljs-string">&quot;SOME INVOICE NUMBER&quot;</span> 
+            <span class="hljs-attr">invoiceNumber</span>: <span class="hljs-string">"SOME INVOICE NUMBER"</span> 
         };
 
         <span class="hljs-keyword">const</span> paymentSchedule = {
             <span class="hljs-attr">interval</span>: {
-                <span class="hljs-attr">length</span>: <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&quot;frequency&quot;</span>).value,
-                <span class="hljs-attr">unit</span>: <span class="hljs-string">&quot;MONTHS&quot;</span>
+                <span class="hljs-attr">length</span>: <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"frequency"</span>).value,
+                <span class="hljs-attr">unit</span>: <span class="hljs-string">"MONTHS"</span>
             },
-            <span class="hljs-attr">startDate</span>: <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&quot;first_payment_date&quot;</span>).value,
-            <span class="hljs-attr">totalOccurrences</span>: <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&quot;payment_number&quot;</span>).value
+            <span class="hljs-attr">startDate</span>: <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"first_payment_date"</span>).value,
+            <span class="hljs-attr">totalOccurrences</span>: <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"payment_number"</span>).value
         };
 
         <span class="hljs-keyword">const</span> requestData = paymentGateway.buildRequestData(
@@ -463,9 +460,9 @@
        <span class="hljs-keyword">if</span> (xmlHttpRequest &amp;&amp; xmlHttpRequest.status === <span class="hljs-number">200</span>) {
            <span class="hljs-keyword">const</span> responseBody = <span class="hljs-built_in">JSON</span>.parse(xmlHttpRequest.response);
 
-            <span class="hljs-keyword">if</span> (responseBody.messages.resultCode !== <span class="hljs-string">&quot;OK&quot;</span>) {
+            <span class="hljs-keyword">if</span> (responseBody.messages.resultCode !== <span class="hljs-string">"OK"</span>) {
                 <span class="hljs-comment">// Replace this with custom error handling for your website.</span>
-                <span class="hljs-built_in">console</span>.error(<span class="hljs-string">&quot;Bad response.&quot;</span>); 
+                <span class="hljs-built_in">console</span>.error(<span class="hljs-string">"Bad response."</span>); 
                 <span class="hljs-comment">// This breaks out of the current function so the code below is not ran.</span>
                 <span class="hljs-keyword">return</span>; 
             }
@@ -473,11 +470,11 @@
             <span class="hljs-comment">// This can be either cardData or bankData. This paymentData object</span>
             <span class="hljs-comment">// is the cardData type.</span>
             <span class="hljs-keyword">const</span> paymentData = {
-                <span class="hljs-attr">cardNumber</span>: <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&quot;card-number&quot;</span>).value,
-                <span class="hljs-attr">cardExpiration</span>: <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&quot;card-expiration&quot;</span>).value,
-                <span class="hljs-attr">cardCode</span>: <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&quot;card-code&quot;</span>).value,
-                <span class="hljs-attr">fullName</span>: <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&quot;cardholder-name&quot;</span>).value,
-                <span class="hljs-attr">zip</span>: <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&quot;zipcode&quot;</span>).value
+                <span class="hljs-attr">cardNumber</span>: <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"card-number"</span>).value,
+                <span class="hljs-attr">cardExpiration</span>: <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"card-expiration"</span>).value,
+                <span class="hljs-attr">cardCode</span>: <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"card-code"</span>).value,
+                <span class="hljs-attr">fullName</span>: <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"cardholder-name"</span>).value,
+                <span class="hljs-attr">zip</span>: <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"zipcode"</span>).value
             };
 
             <span class="hljs-comment">// Encrypts the payment data so it is secure when sending it to Payment Gateway. </span>
@@ -490,9 +487,9 @@
             Accept.dispatchData(secureData, submitSubscriptionRequest);
         } <span class="hljs-keyword">else</span> {
             <span class="hljs-comment">// You would end up in this error block if the response from Payment</span>
-            <span class="hljs-comment">// Gateway does not have a status of &quot;200&quot;. You will want to handle</span>
+            <span class="hljs-comment">// Gateway does not have a status of "200". You will want to handle</span>
             <span class="hljs-comment">// this case with custom error handling for your website.</span>
-            <span class="hljs-built_in">console</span>.error(<span class="hljs-string">&quot;Bad response.&quot;</span>); 
+            <span class="hljs-built_in">console</span>.error(<span class="hljs-string">"Bad response."</span>); 
         }
     }
 
@@ -585,8 +582,17 @@
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/validationdata.html" class="tsd-kind-icon">Validation<wbr>Data</a>
 					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#accounttype" class="tsd-kind-icon">Account<wbr>Type</a>
+					</li>
 					<li class=" tsd-kind-variable">
 						<a href="globals.html#auth_capture_transaction" class="tsd-kind-icon">AUTH_<wbr>CAPTURE_<wbr>TRANSACTION</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#numbers_regex" class="tsd-kind-icon">NUMBERS_<wbr>REGEX</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#chance" class="tsd-kind-icon">chance</a>
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="globals.html#buildapplepaytransactionrequestdata" class="tsd-kind-icon">build<wbr>Apple<wbr>Pay<wbr>Transaction<wbr>Request<wbr>Data</a>
@@ -611,6 +617,15 @@
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="globals.html#getmerchantdetails" class="tsd-kind-icon">get<wbr>Merchant<wbr>Details</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#isbankdatavalid" class="tsd-kind-icon">is<wbr>Bank<wbr>Data<wbr>Valid</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#iscarddatavalid" class="tsd-kind-icon">is<wbr>Card<wbr>Data<wbr>Valid</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#passesluhnalgorithm" class="tsd-kind-icon">passes<wbr>Luhn<wbr>Algorithm</a>
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="globals.html#processapplepaytransactionrequest" class="tsd-kind-icon">process<wbr>Apple<wbr>Pay<wbr>Transaction<wbr>Request</a>
@@ -652,9 +667,9 @@
 	</div>
 </footer>
 <div class="container tsd-generator">
-	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a>, the 7/15/2020 at 2:26:22 PM</p>
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a>, the 7/23/2020 at 11:27:31 AM</p>
 </div>
 <div class="overlay"></div>
 <script src="assets/js/main.js"></script>
-</body>
-</html>
+<script>if (location.protocol == 'file:') document.write('<script src="assets/js/search.js"><' + '/script>');</script>
+</body></html>
